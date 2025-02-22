@@ -32,7 +32,7 @@ def self_introduction():
 
             st.success(f"Meet {name}, {he_she} is {age} {year_label} old {gender.lower()}. Who loves {loves} and enjoys {hobby} in {his_her} free time. {he_she} is always ready for new adventures! 😊")
         else:
-            st.error("❌ Barhe Harami ho Beta.")
+            st.error("❌ Please fill out all fields before submitting.")
 
 
 # Run the app
