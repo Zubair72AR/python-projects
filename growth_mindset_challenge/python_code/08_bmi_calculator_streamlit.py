@@ -45,4 +45,5 @@ def bmi_calculator():
         print("🚨 Obese (Class III) - High health risk! Please consult a healthcare provider. 🏥")
 
 
-bmi_calculator()
+if __name__ == "__main__":
+    bmi_calculator()

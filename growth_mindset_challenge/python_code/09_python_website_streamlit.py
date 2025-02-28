@@ -11,4 +11,6 @@ def generate_qr(link):
 
 
 qr_link = input("🔗 Enter your URL/Link: ")
-generate_qr(qr_link)
+
+if __name__ == "__main__":
+    generate_qr(qr_link)

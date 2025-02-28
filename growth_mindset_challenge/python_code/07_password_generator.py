@@ -90,4 +90,5 @@ def select_password_type():
 
 
 # Call the Function
-select_password_type()
+if __name__ == "__main__":
+    select_password_type()

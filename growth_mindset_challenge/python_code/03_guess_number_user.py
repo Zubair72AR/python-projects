@@ -31,9 +31,14 @@ def computer_guess():
 
 
 # Option to play again
-while True:
-    computer_guess()
-    again = input("Do you want to play again? (yes/no): ").strip().lower()
-    if again != 'yes':
-        print("Thanks for playing! Goodbye.")
-        break
+def play():
+    while True:
+        computer_guess()
+        again = input("Do you want to play again? (yes/no): ").strip().lower()
+        if again != 'yes':
+            print("Thanks for playing! Goodbye.")
+            break
+
+
+if __name__ == "__main__":
+    play()

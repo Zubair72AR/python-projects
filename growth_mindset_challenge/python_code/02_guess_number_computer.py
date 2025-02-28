@@ -32,9 +32,14 @@ def play_game():
 
 
 # If user Wants to play again
-while True:
-    play_game()
-    again = input("Do you want to play again? (yes/no): ").strip().lower()
-    if again != 'yes':
-        print("Thanks for playing! Goodbye.")
-        break
+def play():
+    while True:
+        play_game()
+        again = input("Do you want to play again? (yes/no): ").strip().lower()
+        if again != 'yes':
+            print("Thanks for playing! Goodbye.")
+            break
+
+
+if __name__ == "__main__":
+    play()

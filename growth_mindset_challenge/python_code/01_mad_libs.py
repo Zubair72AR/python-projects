@@ -46,4 +46,5 @@ def self_Introduction():
 
 
 # Calling the function
-self_Introduction()
+if __name__ == "__main__":
+    self_Introduction()

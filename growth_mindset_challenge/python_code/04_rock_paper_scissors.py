@@ -33,4 +33,5 @@ def play_game():
             break
 
 
-play_game()
+if __name__ == "__main__":
+    play_game()

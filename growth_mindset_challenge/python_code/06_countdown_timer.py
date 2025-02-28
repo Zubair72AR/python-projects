@@ -47,10 +47,15 @@ def timer_func(user_input):
 
 
 # User input handling with error checking
-while True:
-    try:
-        user_input = int(input("⏰ Enter Time here in Seconds: "))
-        timer_func(user_input)
-        break
-    except ValueError:
-        print("❌ Please enter a valid number.")
+def play():
+    while True:
+        try:
+            user_input = int(input("⏰ Enter Time here in Seconds: "))
+            timer_func(user_input)
+            break
+        except ValueError:
+            print("❌ Please enter a valid number.")
+
+
+if __name__ == "__main__":
+    play()
