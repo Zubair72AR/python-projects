@@ -13,3 +13,5 @@ https://colab.research.google.com/drive/1y3zeTDiJSzOqrlV29xT-3erm_MQevtBe?usp=sh
 https://colab.research.google.com/drive/1J31u9euci1Xyowd92gS5tSEEmjy07IW-?usp=sharing
 
 https://colab.research.google.com/drive/1_ePYfiwv7yuRI4yVsk_0CZXJVMZiNE0o?usp=sharing
+
+https://08-bmi-calculator.streamlit.app/
