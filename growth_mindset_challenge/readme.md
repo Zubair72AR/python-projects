@@ -55,6 +55,7 @@
 
 ### 9️⃣ Python Website in 15 Minutes (Streamlit Web App)
 
+📌 [Google Colab](https://colab.research.google.com/drive/1OEWeqidJKpD2fYb9G-ggr5fkJkYRCZOz?usp=sharing)  
 🌍 [Live Streamlit App](https://09-python-website.streamlit.app/)
 
 ---
