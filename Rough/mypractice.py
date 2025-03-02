@@ -68,3 +68,22 @@ print(type(fruits_set))
 # Assignment
 # revision till repo 8 modules functions
 # generative ai deep learning machine learning =presentation share it on linked
+
+
+a: str = "hallo, world"
+b: str = "hallo, world"
+print(a is b)
+print("id(a)", id(a))
+print("id(b)", id(b))
+print("--------------------")
+c: str = "a b"
+d: str = "a b"
+print(c is d)
+print("id(c)", id(c))
+print("id(d)", id(d))
+print("--------------------")
+e = "this is a very long string"
+f = "this is a very long string"
+print(e is f)
+print("id(e)", id(e))
+print("id(f)", id(f))
