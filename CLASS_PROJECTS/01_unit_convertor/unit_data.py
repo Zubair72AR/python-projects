@@ -1,124 +1,125 @@
+from decimal import Decimal
+
 conversion_data: dict = {
     "Area": {
-        "Square Kilometre": 1_000_000,  # 1 km² = 1,000,000 m²
-        "Square Metre": 1,  # Base unit
-        "Square Mile": 2_589_988.11,  # 1 mi² = 2,589,988.11 m²
-        "Square Yard": 0.836127,  # 1 yd² = 0.836127 m²
-        "Square Foot": 0.092903,  # 1 ft² = 0.092903 m²
-        "Square Inch": 0.00064516,  # 1 in² = 0.00064516 m²
-        "Hectare": 10_000,  # 1 ha = 10,000 m²
-        "Acre": 4046.86  # 1 acre = 4,046.86 m²
+        "Square Kilometre": Decimal("1000000"),
+        "Square Metre": Decimal("1"),
+        "Square Mile": Decimal("2589988.11"),
+        "Square Yard": Decimal("0.836127"),
+        "Square Foot": Decimal("0.092903"),
+        "Square Inch": Decimal("0.00064516"),
+        "Hectare": Decimal("10000"),
+        "Acre": Decimal("4046.86")
     },
     "Data Transfer Rate": {
-        "Bit per second": 1,  # Base unit (bps)
-        "Kilobit per second": 1_000,  # 1 Kbps = 1,000 bps
-        "Kilobyte per second": 8_000,  # 1 KBps = 8,000 bps
-        "Kibibit per second": 1_024,  # 1 Kibps = 1,024 bps
-        "Megabit per second": 1_000_000,  # 1 Mbps = 1,000,000 bps
-        "Megabyte per second": 8_000_000,  # 1 MBps = 8,000,000 bps
-        "Mebibit per second": 1_048_576,  # 1 Mibps = 1,048,576 bps
-        "Gigabit per second": 1_000_000_000,  # 1 Gbps = 1,000,000,000 bps
-        "Gigabyte per second": 8_000_000_000,  # 1 GBps = 8,000,000,000 bps
-        "Gibibit per second": 1_073_741_824,  # 1 Gibps = 1,073,741,824 bps
-        "Terabit per second": 1_000_000_000_000,  # 1 Tbps = 1,000,000,000,000 bps
-        "Terabyte per second": 8_000_000_000_000,  # 1 TBps = 8,000,000,000,000 bps
-        "Tebibit per second": 1_099_511_627_776  # 1 Tibps = 1,099,511,627,776 bps
+        "Bit per second": Decimal("1"),
+        "Kilobit per second": Decimal("1000"),
+        "Kilobyte per second": Decimal("8000"),
+        "Kibibit per second": Decimal("1024"),
+        "Megabit per second": Decimal("1000000"),
+        "Megabyte per second": Decimal("8000000"),
+        "Mebibit per second": Decimal("1048576"),
+        "Gigabit per second": Decimal("1000000000"),
+        "Gigabyte per second": Decimal("8000000000"),
+        "Gibibit per second": Decimal("1073741824"),
+        "Terabit per second": Decimal("1000000000000"),
+        "Terabyte per second": Decimal("8000000000000"),
+        "Tebibit per second": Decimal("1099511627776")
     },
     "Digital Storage": {
-        "Bit": 1,  # Base unit
-        "Kilobit": 1_000,  # 1 Kb = 1,000 bits
-        "Kibibit": 1_024,  # 1 Kib = 1,024 bits
-        "Megabit": 1_000_000,  # 1 Mb = 1,000,000 bits
-        "Mebibit": 1_048_576,  # 1 Mib = 1,048,576 bits
-        "Gigabit": 1_000_000_000,  # 1 Gb = 1,000,000,000 bits
-        "Gibibit": 1_073_741_824,  # 1 Gib = 1,073,741,824 bits
-        "Terabit": 1_000_000_000_000,  # 1 Tb = 1,000,000,000,000 bits
-        "Tebibit": 1_099_511_627_776,  # 1 Tib = 1,099,511,627,776 bits
-        "Petabit": 1_000_000_000_000_000,  # 1 Pb = 1,000,000,000,000,000 bits
-        "Pebibit": 1_125_899_906_842_624,  # 1 Pib = 1,125,899,906,842,624 bits
-
-        "Byte": 8,  # 1 Byte = 8 bits
-        "Kilobyte": 8_000,  # 1 KB = 8,000 bits
-        "Kibibyte": 8_192,  # 1 KiB = 8,192 bits
-        "Megabyte": 8_000_000,  # 1 MB = 8,000,000 bits
-        "Mebibyte": 8_388_608,  # 1 MiB = 8,388,608 bits
-        "Gigabyte": 8_000_000_000,  # 1 GB = 8,000,000,000 bits
-        "Gibibyte": 8_589_934_592,  # 1 GiB = 8,589,934,592 bits
-        "Terabyte": 8_000_000_000_000,  # 1 TB = 8,000,000,000,000 bits
-        "Tebibyte": 8_796_093_022_208,  # 1 TiB = 8,796,093,022,208 bits
-        "Petabyte": 8_000_000_000_000_000,  # 1 PB = 8,000,000,000,000,000 bits
-        "Pebibyte": 9_007_199_254_740_992  # 1 PiB = 9,007,199,254,740,992 bits
+        "Bit": Decimal("1"),
+        "Kilobit": Decimal("1000"),
+        "Kibibit": Decimal("1024"),
+        "Megabit": Decimal("1000000"),
+        "Mebibit": Decimal("1048576"),
+        "Gigabit": Decimal("1000000000"),
+        "Gibibit": Decimal("1073741824"),
+        "Terabit": Decimal("1000000000000"),
+        "Tebibit": Decimal("1099511627776"),
+        "Petabit": Decimal("1000000000000000"),
+        "Pebibit": Decimal("1125899906842624"),
+        "Byte": Decimal("8"),
+        "Kilobyte": Decimal("8000"),
+        "Kibibyte": Decimal("8192"),
+        "Megabyte": Decimal("8000000"),
+        "Mebibyte": Decimal("8388608"),
+        "Gigabyte": Decimal("8000000000"),
+        "Gibibyte": Decimal("8589934592"),
+        "Terabyte": Decimal("8000000000000"),
+        "Tebibyte": Decimal("8796093022208"),
+        "Petabyte": Decimal("8000000000000000"),
+        "Pebibyte": Decimal("9007199254740992")
     },
     "Energy": {
-        "Joule": 1,  # Base unit
-        "Kilojoule": 1_000,  # 1 kJ = 1,000 J
-        "Gram calorie": 4.184,  # 1 cal = 4.184 J
-        "Kilocalorie": 4_184,  # 1 kcal = 4,184 J
-        "Watt hour": 3_600,  # 1 Wh = 3,600 J
-        "Kilowatt-hour": 3_600_000,  # 1 kWh = 3,600,000 J
-        "Electronvolt": 1.60218e-19,  # 1 eV = 1.60218 × 10⁻¹⁹ J
-        "British thermal unit": 1_055.06,  # 1 BTU = 1,055.06 J
-        "US therm": 105_505_600,  # 1 therm = 105,505,600 J
-        "Foot-pound": 1.35582  # 1 ft⋅lb = 1.35582 J
+        "Joule": Decimal("1"),
+        "Kilojoule": Decimal("1000"),
+        "Gram calorie": Decimal("4.184"),
+        "Kilocalorie": Decimal("4184"),
+        "Watt hour": Decimal("3600"),
+        "Kilowatt-hour": Decimal("3600000"),
+        "Electronvolt": Decimal("1.60218e-19"),
+        "British thermal unit": Decimal("1055.06"),
+        "US therm": Decimal("105505600"),
+        "Foot-pound": Decimal("1.35582")
     },
     "Frequency": {
-        "Hertz": 1,  # Base unit
-        "Kilohertz": 1_000,  # 1 kHz = 1,000 Hz
-        "Megahertz": 1_000_000,  # 1 MHz = 1,000,000 Hz
-        "Gigahertz": 1_000_000_000  # 1 GHz = 1,000,000,000 Hz
+        "Hertz": Decimal("1"),
+        "Kilohertz": Decimal("1000"),
+        "Megahertz": Decimal("1000000"),
+        "Gigahertz": Decimal("1000000000")
     },
     "Fuel Economy": {
-        "Mile per US gallon": 1,  # Base unit
-        "Mile per gallon": 1.20095,  # UK mile per gallon to US mile per gallon
-        "Kilometer per liter": 2.35215,  # 1 km/L = 2.35215 mpg (US)
-        "Litre per 100 kilometres": 235.215  # 1 L/100km = 235.215 mpg (US)
+        "Mile per US gallon": Decimal("1"),
+        "Mile per gallon": Decimal("1.20095"),
+        "Kilometer per liter": Decimal("2.35215"),
+        "Litre per 100 kilometres": Decimal("235.215")
     },
     "Length": {
-        "Kilometre": 1000,  # 1 km = 1000 m
-        "Metre": 1,  # Base unit
-        "Centimetre": 0.01,  # 1 cm = 0.01 m
-        "Millimetre": 0.001,  # 1 mm = 0.001 m
-        "Micrometre": 1e-6,  # 1 µm = 1e-6 m
-        "Nanometre": 1e-9,  # 1 nm = 1e-9 m
-        "Mile": 1609.34,  # 1 mile ≈ 1609.34 m
-        "Yard": 0.9144,  # 1 yard = 0.9144 m
-        "Foot": 0.3048,  # 1 foot = 0.3048 m
-        "Inch": 0.0254,  # 1 inch = 0.0254 m
-        "Nautical Mile": 1852  # 1 nautical mile = 1852 m
+        "Kilometre": Decimal("1000"),
+        "Metre": Decimal("1"),
+        "Centimetre": Decimal("0.01"),
+        "Millimetre": Decimal("0.001"),
+        "Micrometre": Decimal("1e-6"),
+        "Nanometre": Decimal("1e-9"),
+        "Mile": Decimal("1609.34"),
+        "Yard": Decimal("0.9144"),
+        "Foot": Decimal("0.3048"),
+        "Inch": Decimal("0.0254"),
+        "Nautical Mile": Decimal("1852")
     },
     "Mass": {
-        "Kilogram": 1,  # Base unit
-        "Tonne": 0.001,  # 1 kg = 0.001 Tonne
-        "Gram": 1000,  # 1 kg = 1000 g
-        "Milligram": 1_000_000,  # 1 kg = 1,000,000 mg
-        "Microgram": 1_000_000_000,  # 1 kg = 1,000,000,000 µg
-        "Imperial ton": 0.000984207,  # 1 kg = 0.000984207 UK tons
-        "US ton": 0.00110231,  # 1 kg = 0.00110231 US tons
-        "Stone": 0.157473,  # 1 kg = 0.157473 stones
-        "Pound": 2.20462,  # 1 kg = 2.20462 lbs
-        "Ounce": 35.27396  # 1 kg = 35.27396 oz
+        "Kilogram": Decimal("1"),
+        "Tonne": Decimal("0.001"),
+        "Gram": Decimal("1000"),
+        "Milligram": Decimal("1000000"),
+        "Microgram": Decimal("1000000000"),
+        "Imperial ton": Decimal("0.000984207"),
+        "US ton": Decimal("0.00110231"),
+        "Stone": Decimal("0.157473"),
+        "Pound": Decimal("2.20462"),
+        "Ounce": Decimal("35.27396")
     },
     "Plane Angle": {
-        "Radian": 1,  # Base unit
-        "Degree": 57.2958,  # 1 Radian = 57.2958 Degrees
-        "Gradian": 63.662,  # 1 Radian = 63.662 Gradians
-        "Milliradian": 1000,  # 1 Radian = 1000 Milliradians
-        "Arcsecond": 206264.806,  # 1 Radian = 206264.806 Arcseconds
-        "Minute of arc": 3437.75  # 1 Radian = 3437.75 Arcminutes
+        "Radian": Decimal("1"),
+        "Degree": Decimal("57.2958"),
+        "Gradian": Decimal("63.662"),
+        "Milliradian": Decimal("1000"),
+        "Arcsecond": Decimal("206264.806"),
+        "Minute of arc": Decimal("3437.75")
     },
     "Pressure": {
-        "Pascal": 1,  # Base unit
-        "Bar": 1e5,  # 1 Bar = 100000 Pascal
-        "Pound per square inch": 6894.76,  # 1 PSI = 6894.76 Pascal
-        "Standard atmosphere": 101325,  # 1 atm = 101325 Pascal
-        "Torr": 133.322  # 1 Torr = 133.322 Pascal
+        "Pascal": Decimal("1"),
+        "Bar": Decimal("100000"),
+        "Pound per square inch": Decimal("6894.76"),
+        "Standard atmosphere": Decimal("101325"),
+        "Torr": Decimal("133.322")
     },
     "Speed": {
-        "Mile per hour": 1.60934,  # 1 mph = 1.60934 km/h
-        "Foot per second": 1.09728,  # 1 ft/s = 1.09728 km/h
-        "Metre per second": 3.6,  # 1 m/s = 3.6 km/h
-        "Kilometre per hour": 1,  # Base unit
-        "Knot": 1.852  # 1 knot = 1.852 km/h
+        "Kilometre per hour": Decimal("1"),
+        "Mile per hour": Decimal("1.60934"),
+        "Foot per second": Decimal("1.09728"),
+        "Metre per second": Decimal("3.6"),
+        "Knot": Decimal("1.852")
     },
     "Temperature": {
         "Degree Celsius": {
@@ -135,101 +136,38 @@ conversion_data: dict = {
         }
     },
     "Time": {
-        "Nanosecond": {"Second": 1e-9},  # 1 nanosecond = 1e-9 seconds
-        "Microsecond": {"Second": 1e-6},  # 1 microsecond = 1e-6 seconds
-        "Millisecond": {"Second": 1e-3},  # 1 millisecond = 1e-3 seconds
-        "Second": {
-            "Millisecond": 1000,  # 1 second = 1000 milliseconds
-            "Minute": 1/60,  # 1 second = 1/60 minutes
-            "Hour": 1/3600  # 1 second = 1/3600 hours
-        },
-        "Minute": {
-            "Second": 60,  # 1 minute = 60 seconds
-            "Hour": 1/60,  # 1 minute = 1/60 hours
-            "Day": 1/1440  # 1 minute = 1/1440 days
-        },
-        "Hour": {
-            "Second": 3600,  # 1 hour = 3600 seconds
-            "Minute": 60,  # 1 hour = 60 minutes
-            "Day": 1/24,  # 1 hour = 1/24 days
-            "Week": 1/168  # 1 hour = 1/168 weeks
-        },
-        "Day": {
-            "Second": 86400,  # 1 day = 86400 seconds
-            "Hour": 24,  # 1 day = 24 hours
-            "Week": 1/7,  # 1 day = 1/7 weeks
-            # 1 day ≈ 1/30.44 months (average)
-            "Month": 1/30.44
-        },
-        "Week": {
-            "Second": 604800,  # 1 week = 604800 seconds
-            "Day": 7,  # 1 week = 7 days
-            # 1 week ≈ 1/4.345 months (average)
-            "Month": 1/4.345,
-            # 1 week ≈ 1/52.143 years (average)
-            "Year": 1/52.143
-        },
-        "Month": {
-            # 1 month ≈ 2.628e+6 seconds (average)
-            "Second": 2.628e+6,
-            "Day": 30.44,  # 1 month ≈ 30.44 days (average)
-            "Year": 1/12  # 1 month = 1/12 years
-        },
-        "Calendar year": {
-            # 1 calendar year ≈ 3.154e+7 seconds (average)
-            "Second": 3.154e+7,
-            # 1 calendar year ≈ 365.25 days (average, accounting for leap years)
-            "Day": 365.25,
-            "Decade": 1/10,  # 1 calendar year = 1/10 decades
-            "Century": 1/100  # 1 calendar year = 1/100 centuries
-        },
-        "Decade": {
-            "Year": 10,  # 1 decade = 10 years
-            "Century": 1/10  # 1 decade = 1/10 centuries
-        },
-        "Century": {
-            "Year": 100,  # 1 century = 100 years
-            "Decade": 10  # 1 century = 10 decades
-        }
+        "Second": 1,  # Base unit
+        "Nanosecond": 1e-9,  # 1 ns = 1e-9 seconds
+        "Microsecond": 1e-6,  # 1 µs = 1e-6 seconds
+        "Millisecond": 1e-3,  # 1 ms = 1e-3 seconds
+        "Minute": 60,  # 1 min = 60 seconds
+        "Hour": 3600,  # 1 hr = 3600 seconds
+        "Day": 86400,  # 1 day = 86400 seconds
+        "Week": 604800,  # 1 week = 604800 seconds
+        "Month": 2.628e+6,  # 1 month ≈ 2.628e+6 seconds (average)
+        "Year": 3.154e+7,  # 1 year ≈ 3.154e+7 seconds (average)
+        "Decade": 3.154e+8,  # 1 decade = 10 years
+        "Century": 3.154e+9  # 1 century = 100 years
     },
     "Volume": {
-        # 1 US liquid gallon ≈ 3.78541 liters
-        "US liquid gallon": {"Liter": 3.78541},
-        # 1 US liquid quart ≈ 0.946353 liters
-        "US liquid quart": {"Liter": 0.946353},
-        # 1 US liquid pint ≈ 0.473176 liters
-        "US liquid pint": {"Liter": 0.473176},
-        # 1 US legal cup = 0.24 liters
-        "US legal cup": {"Liter": 0.24},
-        # 1 US fluid ounce ≈ 0.0295735 liters
-        "US fluid ounce": {"Liter": 0.0295735},
-        # 1 US tablespoon ≈ 0.0147868 liters
-        "US tablespoon": {"Liter": 0.0147868},
-        # 1 US teaspoon ≈ 0.00492892 liters
-        "US teaspoon": {"Liter": 0.00492892},
-        # 1 cubic meter = 1000 liters
-        "Cubic meter": {"Liter": 1000},
-        "Liter": {
-            "Cubic meter": 0.001,  # 1 liter = 0.001 cubic meters
-            "Milliliter": 1000  # 1 liter = 1000 milliliters
-        },
-        # 1 milliliter = 0.001 liters
-        "Milliliter": {"Liter": 0.001},  # 1 Imperial gallon ≈ 4.54609 liters
-        # 1 Imperial quart ≈ 1.13652 liters
-        "Imperial gallon": {"Liter": 4.54609},
-        # 1 Imperial pint ≈ 0.568261 liters
-        "Imperial quart": {"Liter": 1.13652},
-        # 1 Imperial cup ≈ 0.284131 liters
-        "Imperial pint": {"Liter": 0.568261},
-        # 1 Imperial fluid ounce ≈ 0.0284131 liters
-        "Imperial cup": {"Liter": 0.284131},
-        # 1 Imperial tablespoon ≈ 0.0177582 liters
-        "Imperial fluid ounce": {"Liter": 0.0284131},
-        # 1 Imperial teaspoon ≈ 0.00591939 liters
-        "Imperial tablespoon": {"Liter": 0.0177582},
-        # 1 cubic foot ≈ 28.3168 liters
-        "Imperial teaspoon": {"Liter": 0.00591939},
-        "Cubic foot": {"Liter": 28.3168},  # 1 cubic inch ≈ 0.0163871 liters
-        "Cubic inch": {"Liter": 0.0163871}
-    },
+        "Liter": 1,  # Base unit
+        "US liquid gallon": 3.78541,  # 1 US gallon = 3.78541 liters
+        "US liquid quart": 0.946353,  # 1 US quart = 0.946353 liters
+        "US liquid pint": 0.473176,  # 1 US pint = 0.473176 liters
+        "US legal cup": 0.24,  # 1 US cup = 0.24 liters
+        "US fluid ounce": 0.0295735,  # 1 US fl oz = 0.0295735 liters
+        "US tablespoon": 0.0147868,  # 1 US tbsp = 0.0147868 liters
+        "US teaspoon": 0.00492892,  # 1 US tsp = 0.00492892 liters
+        "Cubic meter": 1000,  # 1 m³ = 1000 liters
+        "Milliliter": 0.001,  # 1 mL = 0.001 liters
+        "Imperial gallon": 4.54609,  # 1 Imperial gallon = 4.54609 liters
+        "Imperial quart": 1.13652,  # 1 Imperial quart = 1.13652 liters
+        "Imperial pint": 0.568261,  # 1 Imperial pint = 0.568261 liters
+        "Imperial cup": 0.284131,  # 1 Imperial cup = 0.284131 liters
+        "Imperial fluid ounce": 0.0284131,  # 1 Imperial fl oz = 0.0284131 liters
+        "Imperial tablespoon": 0.0177582,  # 1 Imperial tbsp = 0.0177582 liters
+        "Imperial teaspoon": 0.00591939,  # 1 Imperial tsp = 0.00591939 liters
+        "Cubic foot": 28.3168,  # 1 ft³ = 28.3168 liters
+        "Cubic inch": 0.0163871  # 1 in³ = 0.0163871 liters
+    }
 }
