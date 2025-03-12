@@ -1,7 +1,11 @@
 import streamlit as st
 import unit_data as cd
 from decimal import Decimal
-
+# Page Title and Fav icon
+st.set_page_config(
+    page_title="Unit Converter",
+    page_icon="💞",
+)
 st.markdown("<h1 style='text-align: center; color:#ef233c;' >Unit Converter</h1>",
             unsafe_allow_html=True)  # Main Title
 st.markdown("<h5 style='text-align: center; color:gray;' >Convert values between different measurement units with ease!</h5>",
