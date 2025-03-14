@@ -7,6 +7,7 @@ library_file = os.path.join(os.path.dirname(__file__), "library.txt")
 
 
 def load_library():
+    # Open File is Exist
     if os.path.exists(library_file):
         with open(library_file, "r") as file:
             return json.load(file)
@@ -15,23 +16,43 @@ def load_library():
 
 
 def save_library(library):
+    # Open File and Add Data
     with open(library_file, "w") as file:
         json.dump(library, file, indent=4)
 
 
 def add_book(library):
-    title: str = input("Enter the book title: ")
-    author: str = input("Enter the author: ")
+    # Add New Book Data Step by Step
+    # Add Title
+    while True:
+        title: str = input("Enter the book title: ")
+        if title:
+            break
+        print(f"Title cannot be blank. Please enter the book title again.")
+    # Add Author Name
+    while True:
+        author: str = input("Enter the author: ")
+        if author:
+            break
+        print(f"Author cannot be blank. Please enter the author name again.")
+    # Add Year of Publish
     while True:
         try:
             year: int = int(input("Enter the publication year: "))
             break
         except ValueError:
             print("⚠️ Please enter a valid year (e.g., 2025).")
-    genre: str = input("Enter the genre: ")
+    # Add Genre
+    while True:
+        genre: str = input("Enter the genre: ")
+        if genre:
+            break
+        print(f"Genre cannot be blank. Please enter the genre again.")
+    # Add Read or Unread
     read: str = input("Have you read this book? (yes/no): ").lower()
+    # Convert True or False
     read: bool = True if read in ["yes", "y"] else False
-
+    # Add Received Data into Dict
     new_book = {
         "title": title,
         "author": author,
@@ -39,8 +60,10 @@ def add_book(library):
         "genre": genre,
         "read": read,
     }
+    # Append and Call Save Function
     library.append(new_book)
     save_library(library)
+    # Added Successfully info for User
     print(f"Book \"{title}\" added successfully.")
 
 
