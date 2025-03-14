@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Educated Pakistan",
+        "author": "Zubair Ahmed",
+        "year": 2025,
+        "genre": "Education",
+        "read": true
+    },
+    {
+        "title": "pak",
+        "author": "zbr",
+        "year": 2025,
+        "genre": "abc",
+        "read": false
+    },
+    {
+        "title": "world",
+        "author": "man",
+        "year": 23,
+        "genre": "abc",
+        "read": true
+    }
+]
