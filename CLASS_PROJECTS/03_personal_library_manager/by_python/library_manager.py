@@ -15,19 +15,26 @@ def load_library():
             # if Blank
             if not data:
                 return []
+            # If Find Load Data
             try:
                 return json.loads(data)
             except json.JSONDecodeError:
                 print(
-                    f"❌ Error: {library_file} is corrupted. Loading an empty library.")
+                    f"❌ Error: {library_file} is corrupted. Resetting library...")
+                # Save new Blank library if Finds Corrupted
+                save_library([])
                 return []
     return []
 
 
 def save_library(library):
-    # Open File and Add Data
-    with open(library_file, "w") as file:
-        json.dump(library, file, indent=4)
+    try:
+        # Open File and Add Data
+        with open(library_file, "w") as file:
+            json.dump(library, file, indent=4)
+    except Exception as e:
+        # If Error While Saving
+        print(f"❌ Error saving library: {e}")
 
 
 def add_book(library):
@@ -35,9 +42,21 @@ def add_book(library):
     # Add Title
     while True:
         title: str = input("📋 Enter the book title: ").strip()
-        if title:
-            break
-        print(f"❌ Title cannot be blank. Please enter the book title again.")
+        # if Blank ask Again Input
+        if not title:
+            print("❌ Title cannot be blank. Please enter the book title again.")
+            continue
+        # Check if Title is already taken
+        is_duplicate = False
+        for book in library:
+            if book["title"].lower() == title.lower():
+                is_duplicate = True
+                break
+        # if Duplicate ask Again Input
+        if is_duplicate:
+            print("❌ Book Title is already taken. Please enter a different title.")
+            continue
+        break
     # Add Author Name
     while True:
         author: str = input("✍️ Enter the author: ").strip()
@@ -80,6 +99,10 @@ def add_book(library):
 
 
 def remove_book(library):
+    # if Library is Empty
+    if not library:
+        print("📚 The library is currently empty. Add a book to get started.")
+        return
     # Enter Title for Removing Book
     while True:
         remove_file = input(
@@ -104,6 +127,10 @@ def remove_book(library):
 
 
 def search_book(library):
+    # if Library is Empty
+    if not library:
+        print("📚 The library is currently empty. Add a book to get started.")
+        return
     # Select Title or Author For Searching
     while True:
         print("Search by: \n1. Title  \n2. Author")
@@ -141,9 +168,9 @@ def search_book(library):
 
 
 def display_book(library):
-    # If no Book in the Library
+    # if Library is Empty
     if not library:
-        print("❌ No books in the library.")
+        print("📚 The library is currently empty. Add a book to get started.")
         return
     # Show Book if in the library
     print("\n📚 Library Books:")
@@ -157,6 +184,10 @@ def display_book(library):
 
 
 def display_statistics(library):
+    # if Library is Empty
+    if not library:
+        print("📚 The library is currently empty. Add a book to get started.")
+        return
     # Total Length of Books in Library
     total_books = len(library)
     # Check if Read Books Available
@@ -199,7 +230,7 @@ def main():
         elif choice == "5":
             display_statistics(library)
         elif choice == "6":
-            print("👋😊 Goodbye!")
+            print("👋😊 Thanks for using Library Manager!")
             break
         else:
             print("❌ Invalid choice. Please try again.")
