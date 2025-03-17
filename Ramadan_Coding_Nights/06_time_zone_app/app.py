@@ -138,3 +138,8 @@ if st.button("Convert Time"):
     # Display the converted time with success message
     st.markdown(
         f"<div style='display: flex;justify-content: center;align-items: center;background: linear-gradient(135deg, #6710c2, #5460f9);padding: 8px 10px; margin: 2px 0px; border-radius: 5px;color: white;font-weight: 600;'>Converted Time from {from_tz} to {to_tz}, {convert_time}</div>", unsafe_allow_html=True)
+
+
+# Footer
+st.markdown("""<p style="color: #2f3038; text-align:center;">Made with ❤ by Zubair Ahmed</p>""",
+            unsafe_allow_html=True)

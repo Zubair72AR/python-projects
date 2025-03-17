@@ -1,0 +1,65 @@
+[
+    {
+        "title": "Whispers of the Wind",
+        "author": "Emma Brown",
+        "year": 2020,
+        "genre": "Romance",
+        "read": false
+    },
+    {
+        "title": "Code Breakers",
+        "author": "Alan Smith",
+        "year": 2022,
+        "genre": "Technology",
+        "read": true
+    },
+    {
+        "title": "Galaxy Odyssey",
+        "author": "Sophia Johnson",
+        "year": 2023,
+        "genre": "Science Fiction",
+        "read": false
+    },
+    {
+        "title": "The Art of Mindfulness",
+        "author": "Liam Williams",
+        "year": 2019,
+        "genre": "Self-Help",
+        "read": true
+    },
+    {
+        "title": "Ancient Legends",
+        "author": "Olivia Davis",
+        "year": 2017,
+        "genre": "Fantasy",
+        "read": false
+    },
+    {
+        "title": "The Hidden Truth",
+        "author": "Daniel White",
+        "year": 2021,
+        "genre": "Thriller",
+        "read": true
+    },
+    {
+        "title": "Echoes of the Past",
+        "author": "Hannah Clark",
+        "year": 2016,
+        "genre": "Historical Fiction",
+        "read": false
+    },
+    {
+        "title": "Future Horizons",
+        "author": "Michael Scott",
+        "year": 2025,
+        "genre": "Dystopian",
+        "read": true
+    },
+    {
+        "title": "Lost in the Cosmos",
+        "author": "Charlotte Lee",
+        "year": 2024,
+        "genre": "Adventure",
+        "read": false
+    }
+]
