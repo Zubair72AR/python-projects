@@ -39,8 +39,7 @@ navigation_menu = ["Add a book",
                    "Remove a book",
                    "Search for a book",
                    "Display all books",
-                   "Display statistics",
-                   "Exit",]
+                   "Display statistics",]
 # Button to Navigate the Page
 selected_option = st.sidebar.radio(
     "Choose an option:", navigation_menu)
@@ -222,12 +221,6 @@ if selected_option == navigation_menu[4]:
         with display_statics[2]:
             st.write(f"📊 :gray[Percentage read:]")
             st.title(f"{percentage_read:.2f}%")
-
-
-# Exit
-if selected_option == navigation_menu[5]:
-    # SubHeading for Exit
-    st.markdown(f"<h5 style='text-align: center; line-height: 15px; margin-top: 15px;color: #AC92EB; font-weight: 400'>Close the application</h5>", unsafe_allow_html=True)
 
 # CSS Properties if Required
 st.markdown("""
