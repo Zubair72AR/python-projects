@@ -128,7 +128,7 @@ if problem_type == ":gray[Problem 3:] \n\n:blue[Sum of Digits]":
                          "#FDAF16", "#03A652", "#008dd0", "#444DA3"]
             # Variable to Displaying Number in CSS Style for Better UI Experience
             styled_numbers = []
-            # For Loop (Make Value in String bcz Loop doesn't work on Integer Value)
+            # For Loop
             for index, value in enumerate(str(user_input03)):
                 # total Variable = Updated total Variable + Iteration Num of Integer
                 total += int(value)

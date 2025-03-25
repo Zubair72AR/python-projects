@@ -1,89 +1,32 @@
-import sys
-import random
-# my_string: str = "Hallo World"
-# modified_string: str = my_string.split("l")
-# print(modified_string)
+def count_number_qty():
+    num_list = []  # empty LIST
+    while True:
+        # get user Input
+        user_input = input("🔢 Please enter a number: ")
+        # If find Blank
+        if not user_input:
+            break
+        # If find positive Numbers
+        if user_input.isdigit():
+            num = int(user_input)  # change into INTEGER
+            num_list.append(num)  # Append in the LIST
+        else:
+            # if find string or negative value
+            print("❌ Invalid input! Please enter a valid number (e.g., 0, 9, 15).")
 
-# message: str = " Pakistan won all the matches of champion trophy"
+    # Count Numbers Quantity
+    num_dict = {}  # empty DICT
+    for val in user_input:  # for Loop to check
+        if val not in num_dict:  # if not find in DICT
+            num_dict[val] = 1  # add 1
+        else:  # if already in DICT
+            num_dict[val] += 1  # plus 1
 
-# len_string: str = " the number of champion "
-# print(len(len_string))
-
-# a: str = "alkfjdslfkdslfkjsdlfkjsadlfkjsadl;fkjsa;kjsdhfkshfksjfhksdhfdshkldfjghkjdfpoegldkjbe;rigjldfkjger;lgj;dfj;lkdflk;gjdflkdgjdsflkjgl;dfkgjldfkgj;dlfkjg;ldfgjl;sdfkgjsd;fklgsdf;ljg;lsdfkjg;dslfkjg;dfskgl;dfsj;gldfsjg;kjdf;lgsdjf;lgksdjf;lkgjsdfl;kgfljas;lf"
-# b: str = "alkfjdslfkdslfkjsdlfkjsadlfkjsadl;fkjsa;kjsdhfkshfksjfhksdhfdshkldfjghkjdfpoegldkjbe;rigjldfkjger;lgj;dfj;lkdflk;gjdflkdgjdsflkjgl;dfkgjldfkgj;dlfkjg;ldfgjl;sdfkgjsd;fklgsdf;ljg;lsdfkjg;dslfkjg;dfskgl;dfsj;gldfsjg;kjdf;lgsdjf;lgksdjf;lkgjsdfl;kgfljas;lf"
-# c: str = "alkfjdslfkdslfkjsdlfkjsadlfkjsadl;fkjsa;kjsdhfkshfksjfhksdhfdshkldfjghkjdfpoegldkjbe;rigjldfkjger;lgj;dfj;lkdflk;gjdflkdgjdsflkjgl;dfkgjldfkgj;dlfkjg;ldfgjl;sdfkgjsd;fklgsdf;ljg;lsdfkjg;dslfkjg;dfskgl;dfsj;gldfsjg;kjdf;lgsdjf;lgksdjf;lkgjsdfl;kgfljas;lf"
-# print(len(a))
-# print(a is b is c)
-# d: str = ("a b")
-# e: str = ("a b")
-# print(d is e)
-# f: str = sys.intern("xyz")
-# g: str = sys.intern("abc")
-# print(f is g)
-
-# fruits: list = ["apple", "orange", "banana"]
-
-# print(len(fruits[0]))
-
-# fruits.pop()  # removes last element
-# fruits.append("Strawberry")  # can add one value at a time
-# fruits.pop(1)  # removes given number element
-# fruits.insert(2, "pineapple")  # add value at the desired position
-# fruits.extend(["mango", "kiwi", "dates"])  # add multiple values
-# print(fruits)
-
-# person: dict = {
-#     "name": "Sir Zia Khan",
-#     "age": 45,
-#     "isTeacher": True,
-#     "class": {
-#         "time": "2 to 5",
-#         "day": "Saturday",
-#         "subjects": my_string
-#     }
-# }
-
-# print(person["class"]["subjects"])
-
-# random_number: int = random.randint(1, 120)
-
-# if (50 > random_number < 49):
-# print("Fail: Score was", random_number)
-# elif (random_number < 99):
-# print("OK: Score was", random_number)
-# else:
-# print("King: Score was", random_number)
+    # display Result
+    for key, val in num_dict.items():
+        qty = "time" if val <= 1 else "times"
+        print(f"Number {key} appears {val} {qty}.")
 
 
-# team: tuple = ("babar", "naseem", "hassan")
-# print(team)
-
-value_Set: set = {0, 1, 1, 3, 4, 5, 6, 7, 8}
-print(value_Set)
-
-fruits_set: set = {"apple", "orange", "orange", "banana"}
-print(fruits_set)
-print(type(fruits_set))
-
-# Assignment
-# revision till repo 8 modules functions
-# generative ai deep learning machine learning =presentation share it on linked
-
-
-a: str = "hallo, world"
-b: str = "hallo, world"
-print(a is b)
-print("id(a)", id(a))
-print("id(b)", id(b))
-print("--------------------")
-c: str = "a b"
-d: str = "a b"
-print(c is d)
-print("id(c)", id(c))
-print("id(d)", id(d))
-print("--------------------")
-e = "this is a very long string"
-f = "this is a very long string"
-print(e is f)
-print("id(e)", id(e))
-print("id(f)", id(f))
+if __name__ == '__main__':
+    count_number_qty()
