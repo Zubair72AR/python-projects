@@ -65,7 +65,7 @@
 
 - ### 8️⃣ BMI Calculator (Streamlit Web App)
 
-  1. [Google Colab](https://colab.research.google.com/drive/1_ePYfiwv7yuRI4yVsk_0CZXJVMZiNE0o?usp=sharing)
+  1. [Google Colab](https://colab.research.google.com/drive/1aD4yIpAawcDX6Djx7rRQ1j0b1QMJiZrB?usp=sharing)
   2. [Github Code](https://github.com/Zubair72AR/python-projects/blob/main/growth_mindset_challenge/python_code/08_bmi_calculator_streamlit.py)
   3. [Live Streamlit App](https://08-bmi-calculator.streamlit.app/)
 
