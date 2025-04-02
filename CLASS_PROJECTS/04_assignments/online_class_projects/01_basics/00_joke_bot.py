@@ -5,7 +5,7 @@ SORRY: str = "\n🤡 Sorry I only tell jokes."
 
 def main():
     # User Input
-    user_input = input(PROMPT)
+    user_input = input(PROMPT).lower().strip()
     if "joke" in user_input:
         # If User Enter "JOKE"
         print(JOKE)

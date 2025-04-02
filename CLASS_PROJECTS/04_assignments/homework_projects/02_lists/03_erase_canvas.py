@@ -1,10 +1,9 @@
 import tkinter as tk
-from tkinter import ttk
 from tkinter import colorchooser
 
-CANVAS_WIDTH = 1200
-CANVAS_HEIGHT = 600
-CELL_SIZE = 20
+CANVAS_WIDTH = 900
+CANVAS_HEIGHT = 450
+CELL_SIZE = 30
 ERASE_SIZE = 1
 
 color = "#ff0000"  # Default Color
