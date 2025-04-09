@@ -1,15 +1,19 @@
-import re
+from timeit import default_timer as tm
 
-emails = [
-    "zubair@gmail.com",
-    "ali@yahoo.com",
-    "fatima@hotmail.com",
-    "ahmed@gmail.com",
-    "sara@outlook.com",
-    "bilal@gmail.com",
-    "myname@gmail.com.xyz"
-]
 
-# Your code here
-gmail_com = [e for e in emails if re.search(r"@gmail.com$", e)]
-print(gmail_com)
+my_list = ["a"] * 100000
+
+start = tm()
+my_str = ""
+for i in my_list:
+    my_str += i
+stop = tm()
+print(f"FOR LOOP {start}, {stop:.2f}")
+print(stop-start)
+
+
+start1 = tm()
+my_str2 = "".join(my_list)
+stop2 = tm()
+print(f"JOIN {start1}, {stop2}")
+print(stop2-start1)
