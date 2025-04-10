@@ -16,7 +16,7 @@
   2. [Github Code](https://github.com/Zubair72AR/python-projects/tree/main/CLASS_PROJECTS/04_assignments/homework_projects/03_if_statements)
 - ### 04_dictionaries
   1. [Google Colab](https://colab.research.google.com/drive/1DvNYHD2eHIO6tLYKTFFCDofrYCrYlQu_?usp=sharing)
-  2. [Github Code not completed](https://github.com/Zubair72AR/python-projects/tree/main/CLASS_PROJECTS/04_assignments/homework_projects/04_dictionaries)
+  2. [Github Code](https://github.com/Zubair72AR/python-projects/tree/main/CLASS_PROJECTS/04_assignments/homework_projects/04_dictionaries)
 - ### 05_loops_control_flow
   1. [Google Colab](https://colab.research.google.com/drive/1TxOCaHX4De1ZvT3vuSfdGMYjp0BBSatT?usp=sharing)
   2. [Github Code](https://github.com/Zubair72AR/python-projects/tree/main/CLASS_PROJECTS/04_assignments/homework_projects/05_loops_control_flow)
