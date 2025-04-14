@@ -1,0 +1,20 @@
+.div_social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: gray;
+  letter-spacing: 1px;
+}
+.social_icon {
+  background-color: gray;
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+  text-decoration: none !important;
+  text-decoration: underline;
+}

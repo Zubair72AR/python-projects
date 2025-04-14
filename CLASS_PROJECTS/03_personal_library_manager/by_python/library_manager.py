@@ -134,7 +134,7 @@ def search_book(library):
     # Select Title or Author For Searching
     while True:
         print("Search by: \n1. Title  \n2. Author")
-        search_type = input("Enter your choice: ").strip()
+        search_type = input("Enter your choice: ").strip().lower()
         if search_type in ["1", "title"]:
             search_type = "title"
             break
