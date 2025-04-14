@@ -16,21 +16,11 @@ credentials:
       - admin
       - editor
       - viewer
-    rbriggs:
-      email: rbriggs@gmail.com
-      failed_login_attempts: 0
-      first_name: Rebecca
-      last_name: Briggs
-      logged_in: false
-      password: $2b$12$SxD/z1xJN6C7G7ygeiCuDOR88ZFAMoky9nCm9JgACEuJiVbVV6/4a
-      roles:
-      - viewer
-    zubair_ahmed:
-      email: zbr@gm.com
-      failed_login_attempts: 0
+    zbr:
+      email: zubair@gmail.com
       first_name: Zubair
       last_name: Ahmed
-      logged_in: true
-      password: $2b$12$ZNS7p5va2Nc7c16gGNCx1O5IF6v6LQyns0pCZO8Z1o40RNw6v9cFS
-      password_hint: zbr123
+      logged_in: false
+      password: $2b$12$2x9pPxGcIUpnfDtRWP6AW.ftXlQuSpht8zsLOUIzRWWRTfHwaZYU2
+      password_hint: zbr$12345
       roles: null
