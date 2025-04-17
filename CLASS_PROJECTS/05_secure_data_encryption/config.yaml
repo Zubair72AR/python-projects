@@ -24,3 +24,11 @@ credentials:
       password: $2b$12$2x9pPxGcIUpnfDtRWP6AW.ftXlQuSpht8zsLOUIzRWWRTfHwaZYU2
       password_hint: zbr$12345
       roles: null
+    zbr2:
+      email: zubair717@gmail.com
+      first_name: Zubair
+      last_name: Ahmed
+      logged_in: false
+      password: $2b$12$0i8PdVwpSCE.brN79PUka..Q6eHO6FU1aBR74qwEB/6e867dDgPOm
+      password_hint: zbr$12345
+      roles: null
