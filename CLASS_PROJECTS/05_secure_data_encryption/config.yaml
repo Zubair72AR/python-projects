@@ -10,7 +10,6 @@ credentials:
       failed_login_attempts: 0
       first_name: John
       last_name: Smith
-      logged_in: false
       password: $2b$12$lhOfbg3eMo9/TIcgFOvlbuYTGJQBdTLU/ek3SiDOooJNrIktqfKr6
       roles:
         - admin
@@ -20,7 +19,6 @@ credentials:
       email: zubair@gmail.com
       first_name: Zubair
       last_name: Ahmed
-      logged_in: false
       password: $2b$12$2x9pPxGcIUpnfDtRWP6AW.ftXlQuSpht8zsLOUIzRWWRTfHwaZYU2
       password_hint: zbr$12345
       roles: null
