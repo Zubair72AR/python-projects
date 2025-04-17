@@ -178,6 +178,8 @@ if st.session_state.get('authentication_status'):
                         stored_data[username] = [new_entry]
                         save_data(stored_data)
                         st.success("Data Stored Successfully! ✅")
+                        st.write(
+                            ":gray[**🚀 Your Encrypted Data:** Copy and save this data safely! You will need this encrypted code to retrieve your original data later.]")
                         st.code(new_entry["encrypted_text"])
                     else:
                         # If User Exists already
