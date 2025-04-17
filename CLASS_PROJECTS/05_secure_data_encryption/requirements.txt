@@ -3,8 +3,8 @@ PyYAML==6.0
 cryptography==42.0.5
 streamlit-authenticator==0.4.2
 streamlit-option-menu==0.3.6
-
-
+bcrypt==3.1.7  # Uncommented (required by streamlit-authenticator)
+PyJWT==2.3.0   # Uncommented (required by streamlit-authenticator)
 # bcrypt==3.1.7
 # captcha==0.5.0
 # cryptography==42.0.5
