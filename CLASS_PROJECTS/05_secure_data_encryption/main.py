@@ -1,6 +1,7 @@
 import streamlit as st
 import os
 import json
+import yaml
 import hashlib
 from yaml.loader import SafeLoader
 from cryptography.fernet import Fernet
@@ -8,7 +9,6 @@ from base64 import b64encode, b64decode
 import streamlit_authenticator as stauth
 from streamlit_option_menu import option_menu
 from streamlit_authenticator.utilities import *
-import yaml
 import time
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
