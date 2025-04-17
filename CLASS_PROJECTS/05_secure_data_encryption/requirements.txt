@@ -1,5 +1,5 @@
 streamlit
-PyYAML==6.0
+PyYAML
 cryptography
 streamlit-authenticator
 streamlit-option-menu
