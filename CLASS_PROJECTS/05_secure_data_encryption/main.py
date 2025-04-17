@@ -16,22 +16,16 @@ import time
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 # Loading config file (Keeps Login and Signup Info)
 # Get the full path to the directory of the current script
-script_dir = os.path.dirname(os.path.abspath(__file__))
+# script_dir = os.path.dirname(os.path.abspath(__file__))
 
-# Construct the full path to the config.yaml file
-config_path = os.path.join(script_dir, 'config.yaml')
+# # Construct the full path to the config.yaml file
+# config_path = os.path.join(script_dir, 'config.yaml')
 
+# with open(config_path, 'r', encoding='utf-8') as file:
+#     config = yaml.load(file, Loader=SafeLoader)
 
-def load_config():
-    with open(config_path, 'r', encoding='utf-8') as file:
-        return yaml.load(file, Loader=SafeLoader)
+config = st.secrets
 
-
-config = load_config()  # Start time load
-
-# Signup process
-if st.session_state.get('signup_success', False):
-    config = load_config()  # Reload config after signup
 
 # Creating the authenticator object
 authenticator = stauth.Authenticate(
