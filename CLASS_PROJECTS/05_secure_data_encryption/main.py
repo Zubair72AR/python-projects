@@ -14,18 +14,15 @@ import time
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 # - - - - - - - - - - LOADING CONFIG FILE & JSON STORAGE FILE - - - - - - - - - -
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-# Loading config file (Keeps Login and Signup Info)
 # Get the full path to the directory of the current script
-# script_dir = os.path.dirname(os.path.abspath(__file__))
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
-# # Construct the full path to the config.yaml file
-# config_path = os.path.join(script_dir, 'config.yaml')
+# Construct the full path to the config.yaml file
+config_path = os.path.join(script_dir, 'config.yaml')
 
-# with open(config_path, 'r', encoding='utf-8') as file:
-#     config = yaml.load(file, Loader=SafeLoader)
-
-config = st.secrets
-
+# Loading config file (Keeps Login and Signup Info)
+with open(config_path, 'r', encoding='utf-8') as file:
+    config = yaml.load(file, Loader=SafeLoader)
 
 # Creating the authenticator object
 authenticator = stauth.Authenticate(
