@@ -4,7 +4,7 @@ import streamlit as st
 # - - - - - - - - - - PAGE TITLE - - - - - - - - - -
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 st.markdown(f"<p style='text-align: center; line-height: 1px; color: #666;font-weight: 100; font-size:14px;'>This quiz is for practice purposes only. Please do not consider it official.</p>", unsafe_allow_html=True)
-st.markdown(f"<h1 style='text-align: center; line-height: 5px;'>🚀 Test Your Python Knowledge!</h1>",
+st.markdown(f"<h1 style='text-align: center; line-height: 20px; margin-bottom: 20px;'>🚀 Test Your Python Knowledge!</h1>",
             unsafe_allow_html=True)
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -12,6 +12,7 @@ st.markdown(f"<h1 style='text-align: center; line-height: 5px;'>🚀 Test Your P
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 quiz_data = [
     {
+        "concept": "Absolute Value Function",
         "question": """
         num1 = 5
         num2 = abs(-5)
@@ -21,6 +22,7 @@ quiz_data = [
         "answer": "10",
         "reason": "abs returns positive"
     }, {
+        "concept": "Boolean Conversion Logic",
         "question": """
     print(bool(0))
     print(bool(""))
@@ -30,12 +32,13 @@ quiz_data = [
             "False False True",
             "True False False",
             "False False False",
-            "True True True"
+            "True True Error"
         ],
         "answer": "False False True",
         "reason": "0/Empty False, -1 True"
     },
     {
+        "concept": "List Reference Behavior",
         "question": """
         x = [1,2]
         y = x
@@ -47,6 +50,7 @@ quiz_data = [
         "reason": "Same list reference"
     },
     {
+        "concept": "Negative Indexing",
         "question": """
         my_list = [1, 2, 3]
         print(my_list[-1])
@@ -56,6 +60,7 @@ quiz_data = [
         "reason": "Negative index last"
     },
     {
+        "concept": "String Multiplication",
         "question": """
         print("A" * 3)
         """,
@@ -64,6 +69,7 @@ quiz_data = [
         "reason": "String repeated"
     },
     {
+        "concept": "String to List Conversion",
         "question": """
         print(list("abc"))
         """,
@@ -72,6 +78,7 @@ quiz_data = [
         "reason": "String to list"
     },
     {
+        "concept": "Set Behavior - Unique Elements",
         "question": """
         print(len(set([1, 2, 2, 3])))
         """,
@@ -80,6 +87,7 @@ quiz_data = [
         "reason": "Set removes duplicates"
     },
     {
+        "concept": "String Indexing",
         "question": """
         print("hello"[1])
         """,
@@ -88,6 +96,7 @@ quiz_data = [
         "reason": "Index starts zero"
     },
     {
+        "concept": "List Clear Method",
         "question": """
         x = [1, 2, 3]
         x.clear()
@@ -98,6 +107,7 @@ quiz_data = [
         "reason": "clear makes empty"
     },
     {
+        "concept": "Data Type Identification",
         "question": """
         print(type([]))
         """,
@@ -106,6 +116,7 @@ quiz_data = [
         "reason": "[] defines list"
     },
     {
+        "concept": "String Immutability",
         "question": """
     greeting = "hallo"
     greeting = greeting + "!"
@@ -115,7 +126,6 @@ quiz_data = [
         "answer": "Hallo!",
         "reason": "Strings create new object"
     }
-
 ]
 
 
@@ -128,8 +138,9 @@ if "submitted" not in st.session_state:
 
 for index, q in enumerate(quiz_data, start=1):
     correct = q["answer"]
-    st.markdown(f"<h4 class='q_heading'>{index}. What will be the output?</h4>",
-                unsafe_allow_html=True)
+    st.write("")
+    st.write(
+        f":gray[{index}. What will be the output?] Concept: :violet[{q['concept']}]")
     st.code(q["question"])
     options = q["options"]
     selected_answer = st.radio(
@@ -160,7 +171,12 @@ st.markdown("""<p style="color: #2f3038; text-align:center;">Made with ❤ by Zu
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 st.markdown("""
 <style>.q_heading{
-color: crimson !important;
+color: white !important;
+font-weight:100 !important;
+font-size: 18px !important;
 line-height: 5px !important;
 margin-top:20px !important;  
+.concept{
+font-weight:800 !important;
+color: crimson !important;  
 }</style>""", unsafe_allow_html=True)
