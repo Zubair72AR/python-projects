@@ -316,6 +316,9 @@ else:
     # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     if selected == "Login":
         st.markdown(f"<p style='text-align: center; line-height: 25px; margin-top: 30px; color:violet; font-size: 30px; font-weight: 600'>Sign in 👋 to Secure Data</p>", unsafe_allow_html=True)
+        st.info("App works perfectly on local network, but after deploying to Streamlit Cloud, new user signup works, but login fails — likely a YAML config issue! If you face the same, please test with these login details:")
+        st.code(
+            "Username: zbr | Password: Zbr$12345 , Username: Mr_Ali | Password: Ali$12345.", language=None)
         # Creating a login widget
         try:
             authenticator.login()

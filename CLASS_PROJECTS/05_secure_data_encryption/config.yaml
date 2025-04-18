@@ -12,9 +12,17 @@ credentials:
       last_name: Smith
       password: $2b$12$lhOfbg3eMo9/TIcgFOvlbuYTGJQBdTLU/ek3SiDOooJNrIktqfKr6
       roles:
-        - admin
-        - editor
-        - viewer
+      - admin
+      - editor
+      - viewer
+    mr_ali:
+      email: ali@gm.com
+      first_name: Ali
+      last_name: Ahmed
+      logged_in: false
+      password: $2b$12$RgynkysSR8mkDrh2AsAYVeFamXZOEJLi1DySs4tdX9oH6g6BwsdRS
+      password_hint: Ali$12345
+      roles: null
     zbr:
       email: zubair@gmail.com
       first_name: Zubair
