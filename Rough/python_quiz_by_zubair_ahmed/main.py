@@ -12,6 +12,56 @@ st.markdown(f"<h1 style='text-align: center; line-height: 20px; margin-bottom: 2
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 quiz_data = [
     {
+        "concept": "Boolean Logic with `or`, `and`, and `not`",
+        "question": """
+    name = "Babar Azam"
+    age = 18
+    position = None
+
+    print(name or age or position)
+    print(name and age and position)
+    print(not age)
+    """,
+        "options": [
+            "Babar Azam None False",
+            "Babar Azam None True",
+            "Error: None breaks `and` operation",
+            "Babar Azam None True"
+        ],
+        "answer": "Babar Azam None False",
+        "reason": "`or` gives first truthy, `and` gives last falsy (None), `not` negates age"
+    },
+    {
+        "concept": "String Immutability and Replacement",
+        "question": """
+    my_String = "Hallo World"
+    print(my_String.replace("World", "Pakistan"))
+    """,
+        "options": [
+            "Hallo Pakistan",
+            "Hallo World",
+            "Error: replace() doesn't work on immutable strings",
+            "Error: Strings are immutable, can't modify in place"
+        ],
+        "answer": "Hallo Pakistan",
+        "reason": "String replaced without modifying original"
+    },
+    {
+        "concept": "Count Occurrences in List",
+        "question": """
+    my_list = ["A", "A", "a", "B", "C", "C", "D"]
+    print(sum(1 for letter in my_list if letter == "A"))
+    """,
+        "options": [
+            "3",
+            "2",
+            "1",
+            "Error: LOOP should return letter not count"
+        ],
+        "answer": "2",
+        "reason": "Count of 'A' is 2"
+    },
+    {
         "concept": "Absolute Value Function",
         "question": """
         num1 = 5
