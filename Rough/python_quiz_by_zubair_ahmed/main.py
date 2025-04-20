@@ -12,6 +12,68 @@ st.markdown(f"<h1 style='text-align: center; line-height: 20px; margin-bottom: 2
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 quiz_data = [
     {
+        "concept": "Boolean Logic with `any()` Function",
+        "question": """
+age = [0, 25, 18]
+name = ["", "", "Naseem"]
+numbers = [0, 0, 0]
+
+print(any(age))
+print(any(name))
+print(any(numbers))
+""",
+        "options": [
+            "True True False",
+            "False False False",
+            "Error: Empty strings not allowed",
+            "True False True"
+        ],
+        "answer": "True True False",
+        "reason": "`any()` returns True if at least one truthy value exists"
+    },
+    {
+        "concept": "Boolean Logic with `all()` Function",
+        "question": """
+age = [0, 25, 18]
+name = ["Zubair", "Babar", "Naseem"]
+numbers = [0, 0, ""]
+
+print(all(age))
+print(all(name))
+print(all(numbers))
+""",
+        "options": [
+            "False True False",
+            "True True True",
+            "Error: Zero breaks all()",
+            "False False False"
+        ],
+        "answer": "False True False",
+        "reason": "`all()` returns False if any falsy value (like 0) exists"
+    },
+    {
+        "concept": "Try-Except-Finally Execution Flow",
+        "question": """
+    def test():
+        try:
+            x = 1 / 0
+        except ZeroDivisionError:
+            return "Error Caught"
+        finally:
+            print("Finally Block Running")
+
+    print(test())
+    """,
+        "options": [
+            "Error Caught (Finally Block also runs)",
+            "Error Caught",
+            "Finally Block Running",
+            "``Except`` return skips ``finally`` block"
+        ],
+        "answer": "Error Caught (Finally Block also runs)",
+        "reason": "Finally always runs, even after return"
+    },
+    {
         "concept": "Boolean Logic with `or`, `and`, and `not`",
         "question": """
     name = "Babar Azam"
