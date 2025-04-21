@@ -12,6 +12,49 @@ st.markdown(f"<h1 style='text-align: center; line-height: 20px; margin-bottom: 2
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 quiz_data = [
 
+    {
+        "concept": "Tuple Syntax: Single Element Trap",
+        "question": """
+my_tuple: tuple = ("1")
+print(type(my_tuple))
+""",
+        "options": [
+            "<class 'tuple'>",
+            "<class 'int'>",
+            "Error: Invalid tuple definition",
+            "<class 'str'>"
+        ],
+        "answer": "<class 'str'>",
+        "reason": "Single-element tuples need a comma, without it Python treats it as an String/Integer/Float."
+    },
+    {
+        "concept": "Using `exec()` to Execute Code from String",
+        "question": """
+text_str = \"\"\"
+greeting = "Welcome"
+print(greeting)
+
+for x in range(1,5,2):
+    print(x)
+
+print(len(greeting))
+\"\"\"
+
+exec(text_str)
+
+# WARNING:
+# Never use exec() on untrusted files or user input unless you are completely sure of what the code contains. Always sanitize inputs to avoid security risks like code injection or remote code execution.
+""",
+        "options": [
+            "Welcome 1 2 3 4 7",
+            "Welcome 1 2 3 4 5 7",
+            "Welcome 1 3 7",
+            "Error: exec() doesn't execute code"
+        ],
+        "answer": "Welcome 1 3 7",
+        "reason": "`exec()` executes the code, prints 'Welcome', loops with range(1, 5, 2), and prints the length of the greeting string."
+    },
+
 
     {
         "concept": "Type Conversion: Boolean & Float to Integer",
