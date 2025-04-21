@@ -11,6 +11,43 @@ st.markdown(f"<h1 style='text-align: center; line-height: 20px; margin-bottom: 2
 # - - - - - - - - - - QUIZ DATA - - - - - - - - - -
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 quiz_data = [
+
+
+    {
+        "concept": "Type Conversion: Boolean & Float to Integer",
+        "question": """
+print(int(True))
+print(int(1))
+print(int(1.0))
+print(int(False))
+print(int(0))
+print(int(0.0))
+""",
+        "options": [
+            "1 1 1 0 0 0",
+            "True 1 1 False 0 0",
+            "True 1 1.0 False 0 0.0",
+            "Error: Can't convert float or bool to int"
+        ],
+        "answer": "1 1 1 0 0 0",
+        "reason": "True == 1 and False == 0; float values without decimal converted to int directly."
+    },
+
+    {
+        "concept": "Set Uniqueness and Truthy/Falsy Values",
+        "question": """
+my_set = {True, 1, 1.0, False, 0, 0.0, "Babar", "babar"}
+print(len(my_set))
+""",
+        "options": [
+            "4",
+            "6",
+            "Error: Set cannot contain duplicate types",
+            "5"
+        ],
+        "answer": "4",
+        "reason": "True == 1 / 1.0 and False == 0 / 0.0 are equal, so duplicates removed."
+    },
     {
         "concept": "String Method: `count()` and Case Sensitivity",
         "question": """
