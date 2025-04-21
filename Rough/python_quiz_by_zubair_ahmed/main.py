@@ -12,6 +12,57 @@ st.markdown(f"<h1 style='text-align: center; line-height: 20px; margin-bottom: 2
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 quiz_data = [
 
+
+    {
+        "concept": "Dictionary `.setdefault()` Behavior",
+        "question": """
+countries = {"PAK": 92, "KSA": 966, "UAE": 971}
+pakistan = countries.setdefault("PAK", 100)
+print(pakistan)
+""",
+        "options": [
+            "92",
+            "100",
+            "Error: Key already exists",
+            "None"
+        ],
+        "answer": "92",
+        "reason": "`setdefault()` returns existing value if key exists"
+    },
+
+    {
+        "concept": "Dictionary `.get()` Method with Default Value",
+        "question": """
+countries = {"PAK": 92, "KSA": 966, "UAE": 971, "AFG": 93}
+print(countries.get("USA"))
+print(countries.get("USA", "Not-Found"))
+""",
+        "options": [
+            "None Not-Found",
+            "Error: 'USA' Key not found",
+            "Not-Found Not-Found",
+            "None None"
+        ],
+        "answer": "None Not-Found",
+        "reason": "If key not found: `.get()` returns `None` or the provided default"
+    },
+
+    {
+        "concept": "Sorting List with `key=len` and `reverse=True`",
+        "question": """
+countries = ["Pakistan", "Iran", "UAE", "Afghanistan", "China"]
+print(sorted(countries, key=len, reverse=True))
+""",
+        "options": [
+            "['Afghanistan', 'China', 'Iran', 'Pakistan', 'UAE']",
+            "['UAE', 'Iran', 'China', 'Pakistan', 'Afghanistan']",
+            "['Afghanistan', 'Pakistan', 'China', 'Iran', 'UAE']",
+            "Error: `key=len` can't be used with `reverse`"
+        ],
+        "answer": "['Afghanistan', 'Pakistan', 'China', 'Iran', 'UAE']",
+        "reason": "`sorted()` uses length for sorting, reverse=True reverses the order"
+    },
+
     {
         "concept": "Zip with Dictionary and List in Loops",
         "question": """
