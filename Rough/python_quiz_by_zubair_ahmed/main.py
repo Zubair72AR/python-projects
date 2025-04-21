@@ -11,7 +11,21 @@ st.markdown(f"<h1 style='text-align: center; line-height: 20px; margin-bottom: 2
 # - - - - - - - - - - QUIZ DATA - - - - - - - - - -
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 quiz_data = [
-
+    {
+        "concept": "Tuple vs Integer Assignment Confusion",
+        "question": """
+value:int = 1,125,256,199
+print(type(value))
+""",
+        "options": [
+            "<class 'tuple'>",
+            "<class 'int'>",
+            "Error: Invalid comma-separated integer",
+            "<class 'list'>"
+        ],
+        "answer": "<class 'tuple'>",
+        "reason": "Comma separates values, making it a tuple"
+    },
     {
         "concept": "Rounding Numbers with `round()`",
         "question": """
