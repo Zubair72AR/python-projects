@@ -12,6 +12,58 @@ st.markdown(f"<h1 style='text-align: center; line-height: 20px; margin-bottom: 2
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 quiz_data = [
     {
+        "concept": "String Method: `count()` and Case Sensitivity",
+        "question": """
+text = "National or International"
+print(text.count("n"))
+""",
+        "options": [
+            "3",
+            "5",
+            "Error: count() doesn't work on string",
+            "4"
+        ],
+        "answer": "4",
+        "reason": "`count()` method is case-sensitive and only counts lowercase 'n'."
+    },
+    {
+        "concept": "F-String Debugging Feature (`= syntax`)",
+        "question": """
+person = "Zubair"
+marks = 75
+print(f"{person=}")
+print(f"{marks=}")
+print(f"{1+2=}")
+""",
+        "options": [
+            "person='Zubair' marks=75 1+2=3",
+            "Zubair 75 3",
+            "Error: Invalid syntax for f-string with '='",
+            "person=Zubair marks=75 1+2=3"
+        ],
+        "answer": "person='Zubair' marks=75 1+2=3",
+        "reason": "`=` f-string debugging feature prints both the variable name and its value."
+    },
+
+    {
+        "concept": "Extended Iterable Unpacking in Python",
+        "question": """
+players = ["Babar", "Naseem", "Rizwan", "Shaheen"]
+first_player, *other_players, last_player = players
+print(first_player)
+print(other_players)
+print(last_player)
+""",
+        "options": [
+            "Babar ['Naseem', 'Rizwan'] Shaheen",
+            "'Babar' 'Naseem' 'Rizwan'",
+            "Error: Too many values to unpack",
+            "['Babar', 'Naseem', 'Rizwan', 'Shaheen']"
+        ],
+        "answer": "Babar ['Naseem', 'Rizwan'] Shaheen",
+        "reason": "`*other_players` absorbs middle values in unpacking"
+    },
+    {
         "concept": "Tuple vs Integer Assignment Confusion",
         "question": """
 value:int = 1,125,256,199
@@ -163,7 +215,7 @@ print(list(my_iterator))
             "[1, 2, 3] StopIteration Error"
         ],
         "answer": "[1, 2, 3] []",
-        "reason": "Iterator exhausts after first complete loop"
+        "reason": "Iterator exhausts after first_player complete loop"
     },
     {
         "concept": "String Multiplication & `capitalize()` Behavior",
@@ -178,7 +230,7 @@ print(lol.capitalize())
             "HaHaHaHa..!"
         ],
         "answer": "Hahahaha..!",
-        "reason": "`capitalize()` makes first letter uppercase, rest lowercase"
+        "reason": "`capitalize()` makes first_player letter uppercase, rest lowercase"
     }, {
         "concept": "Multiple Variable Assignment & `print()` Parameters",
         "question": """
@@ -275,7 +327,7 @@ print(all(numbers))
             "Babar Azam None True"
         ],
         "answer": "Babar Azam None False",
-        "reason": "`or` gives first truthy, `and` gives last falsy (None), `not` negates age"
+        "reason": "`or` gives first_player truthy, `and` gives last_player falsy (None), `not` negates age"
     },
     {
         "concept": "String Immutability and Replacement",
@@ -353,7 +405,7 @@ print(all(numbers))
         """,
         "options": ["1", "2", "3", "Error"],
         "answer": "3",
-        "reason": "Negative index last"
+        "reason": "Negative index last_player"
     },
     {
         "concept": "String to List Conversion",
