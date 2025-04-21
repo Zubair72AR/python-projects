@@ -34,18 +34,18 @@ print(int(0.0))
     },
 
     {
-        "concept": "Set Uniqueness and Truthy/Falsy Values",
+        "concept": "Set with Mixed Data Types",
         "question": """
 my_set = {True, 1, 1.0, False, 0, 0.0, "Babar", "babar"}
-print(len(my_set))
+print(my_set)
 """,
         "options": [
-            "4",
-            "6",
-            "Error: Set cannot contain duplicate types",
-            "5"
+            "{True, 1, 1.0, False, 0, 0.0, 'Babar', 'babar'}",
+            "{False, True, 'babar', 'Babar'}",
+            "{True, 1, False, 0, 'Babar', 'babar'}",
+            "Error: Duplicate values are not allowed in sets"
         ],
-        "answer": "4",
+        "answer": "{False, True, 'babar', 'Babar'}",
         "reason": "True == 1 / 1.0 and False == 0 / 0.0 are equal, so duplicates removed."
     },
     {
