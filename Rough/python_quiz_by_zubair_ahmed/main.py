@@ -10,9 +10,23 @@ st.markdown(f"<h1 style='text-align: center; line-height: 20px; margin-bottom: 2
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 # - - - - - - - - - - QUIZ DATA - - - - - - - - - -
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-quiz_data = [
-
-
+quiz_data = [{
+    "concept": "Number Formatting with Underscore & Comma",
+    "question": """
+large_number = 10000000000
+print(f"{large_number:,}")
+large_number2 = 10_000_000_000
+print(large_number2)
+""",
+    "options": [
+        "10,000,000,000\n10000000000",
+        "10,000,000,000\n10_000_000_000",
+        "Error: Underscore (_) not allowed in integers",
+        "10000000000\n10_000_000_000"
+    ],
+    "answer": "10,000,000,000\n10000000000",
+    "reason": "Comma formats number, underscore is ignored in value"
+},
     {
         "concept": "Dictionary `.setdefault()` Behavior",
         "question": """
@@ -28,7 +42,7 @@ print(pakistan)
         ],
         "answer": "92",
         "reason": "`setdefault()` returns existing value if key exists"
-    },
+},
 
     {
         "concept": "Dictionary `.get()` Method with Default Value",
@@ -45,7 +59,7 @@ print(countries.get("USA", "Not-Found"))
         ],
         "answer": "None Not-Found",
         "reason": "If key not found: `.get()` returns `None` or the provided default"
-    },
+},
 
     {
         "concept": "Sorting List with `key=len` and `reverse=True`",
@@ -61,7 +75,7 @@ print(sorted(countries, key=len, reverse=True))
         ],
         "answer": "['Afghanistan', 'Pakistan', 'China', 'Iran', 'UAE']",
         "reason": "`sorted()` uses length for sorting, reverse=True reverses the order"
-    },
+},
 
     {
         "concept": "Zip with Dictionary and List in Loops",
@@ -80,7 +94,7 @@ for (key, value), country in zip(name_num.items(), countries):
         ],
         "answer": "Zubair - 99%, PAK. Babar - 75%, KSA.",
         "reason": "Zip pairs dictionary items with list elements"
-    },
+},
 
 
     {
@@ -97,7 +111,7 @@ print(my_list)
         ],
         "answer": "[10, 8, 6, 4]",
         "reason": "Steps by -2, so it includes 4 but not 3"
-    },
+},
     {
         "concept": "Iterator Exhaustion in Python",
         "question": """
@@ -115,7 +129,7 @@ print(list(my_iterator))
         ],
         "answer": "[1, 2, 3] []",
         "reason": "Iterator exhausts after first complete loop"
-    },
+},
     {
         "concept": "String Multiplication & `capitalize()` Behavior",
         "question": """
@@ -130,7 +144,7 @@ print(lol.capitalize())
         ],
         "answer": "Hahahaha..!",
         "reason": "`capitalize()` makes first letter uppercase, rest lowercase"
-    }, {
+}, {
         "concept": "Multiple Variable Assignment & `print()` Parameters",
         "question": """
 a, b, c = "Zubair", True, 15
@@ -145,7 +159,7 @@ print(b, a , c, sep=", ", end=".")
         ],
         "answer": "True, Zubair, 15.",
         "reason": "`sep` defines separator, `end` defines output ending"
-    },
+},
     {
         "concept": "Boolean Logic with `any()` Function",
         "question": """
@@ -165,7 +179,7 @@ print(any(numbers))
         ],
         "answer": "True True False",
         "reason": "`any()` returns True if at least one truthy value exists"
-    },
+},
     {
         "concept": "Boolean Logic with `all()` Function",
         "question": """
@@ -185,7 +199,7 @@ print(all(numbers))
         ],
         "answer": "False True False",
         "reason": "`all()` returns False if any falsy value (like 0) exists"
-    },
+},
     {
         "concept": "Try-Except-Finally Execution Flow",
         "question": """
@@ -207,7 +221,7 @@ print(all(numbers))
         ],
         "answer": "Error Caught (Finally Block also runs)",
         "reason": "Finally always runs, even after return"
-    },
+},
     {
         "concept": "Boolean Logic with `or`, `and`, and `not`",
         "question": """
@@ -227,7 +241,7 @@ print(all(numbers))
         ],
         "answer": "Babar Azam None False",
         "reason": "`or` gives first truthy, `and` gives last falsy (None), `not` negates age"
-    },
+},
     {
         "concept": "String Immutability and Replacement",
         "question": """
@@ -242,7 +256,7 @@ print(all(numbers))
         ],
         "answer": "Hallo Pakistan",
         "reason": "String replaced without modifying original"
-    },
+},
     {
         "concept": "Count Occurrences in List",
         "question": """
@@ -257,7 +271,7 @@ print(all(numbers))
         ],
         "answer": "2",
         "reason": "Count of 'A' is 2"
-    },
+},
     {
         "concept": "Absolute Value Function",
         "question": """
@@ -268,7 +282,7 @@ print(all(numbers))
         "options": ["5", "10", "0", "Error"],
         "answer": "10",
         "reason": "abs returns positive"
-    }, {
+}, {
         "concept": "Boolean Conversion Logic",
         "question": """
     print(bool(0))
@@ -283,7 +297,7 @@ print(all(numbers))
         ],
         "answer": "False False True",
         "reason": "0/Empty False, -1 True"
-    },
+},
     {
         "concept": "List Reference Behavior",
         "question": """
@@ -295,7 +309,7 @@ print(all(numbers))
         "options": ["[1, 2]", "[1, 2, 3]", "[3]", "Error"],
         "answer": "[1, 2, 3]",
         "reason": "Same list reference"
-    },
+},
     {
         "concept": "Negative Indexing",
         "question": """
@@ -305,7 +319,7 @@ print(all(numbers))
         "options": ["1", "2", "3", "Error"],
         "answer": "3",
         "reason": "Negative index last"
-    },
+},
     {
         "concept": "String to List Conversion",
         "question": """
@@ -314,7 +328,7 @@ print(all(numbers))
         "options": ["['abc']", "['a','b','c']", "Error", "None"],
         "answer": "['a','b','c']",
         "reason": "String to list"
-    },
+},
     {
         "concept": "Set Behavior - Unique Elements",
         "question": """
@@ -323,7 +337,7 @@ print(all(numbers))
         "options": ["4", "3", "2", "Error"],
         "answer": "3",
         "reason": "Set removes duplicates"
-    },
+},
     {
         "concept": "String Indexing",
         "question": """
@@ -332,7 +346,7 @@ print(all(numbers))
         "options": ["h", "e", "l", "o"],
         "answer": "e",
         "reason": "Index starts zero"
-    },
+},
     {
         "concept": "List Clear Method",
         "question": """
@@ -343,7 +357,7 @@ print(all(numbers))
         "options": ["0", "3", "Error", "None"],
         "answer": "0",
         "reason": "clear makes empty"
-    },
+},
     {
         "concept": "Data Type Identification",
         "question": """
@@ -352,7 +366,7 @@ print(all(numbers))
         "options": ["list", "dict", "tuple", "set"],
         "answer": "list",
         "reason": "[] defines list"
-    },
+},
     {
         "concept": "String Immutability",
         "question": """
@@ -363,7 +377,7 @@ print(all(numbers))
         "options": ["hallo!", "Hallo!", "error due to immutable", "None"],
         "answer": "Hallo!",
         "reason": "Strings create new object"
-    }
+}
 ]
 
 
