@@ -11,6 +11,90 @@ st.markdown(f"<h1 style='text-align: center; line-height: 20px; margin-bottom: 2
 # - - - - - - - - - - QUIZ DATA - - - - - - - - - -
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 quiz_data = [
+
+    {
+        "concept": "Zip with Dictionary and List in Loops",
+        "question": """
+countries = ["PAK", "KSA", "UAE", "USA"]
+name_num = {"Zubair": 99, "Babar": 75}
+
+for (key, value), country in zip(name_num.items(), countries):
+    print(f"{key} - {value}%, {country}.")
+""",
+        "options": [
+            "Zubair - 99%, PAK. Babar - 75%, KSA. Zubair - 99%, UAE. Babar - 75%, USA.",
+            "Zubair - 99%, PAK. Babar - 75%, KSA.",
+            "Error: Invalid pairing of country and name",
+            "PAK - Zubair%. KSA - 99%. UAE - Babar%. USA - 75%."
+        ],
+        "answer": "Zubair - 99%, PAK. Babar - 75%, KSA.",
+        "reason": "Zip pairs dictionary items with list elements"
+    },
+
+
+    {
+        "concept": "Range with Negative Step",
+        "question": """
+my_list:range = list(range(10, 3, -2))
+print(my_list)
+""",
+        "options": [
+            "[10, 8, 6, 4]",
+            "[10, 8, 6]",
+            "[2, 4, 6, 8, 10]",
+            "Error: Invalid Step"
+        ],
+        "answer": "[10, 8, 6, 4]",
+        "reason": "Steps by -2, so it includes 4 but not 3"
+    },
+    {
+        "concept": "Iterator Exhaustion in Python",
+        "question": """
+serial = [1,2,3]
+my_iterator = iter(serial)
+
+print(list(my_iterator))
+print(list(my_iterator))
+""",
+        "options": [
+            "[1, 2, 3] [1, 2, 3]",
+            "[1, 2, 3] []",
+            "Error: Iterator can't be reused",
+            "[1, 2, 3] StopIteration Error"
+        ],
+        "answer": "[1, 2, 3] []",
+        "reason": "Iterator exhausts after first complete loop"
+    },
+    {
+        "concept": "String Multiplication & `capitalize()` Behavior",
+        "question": """
+lol = ("HA" * 4) + "..!"
+print(lol.capitalize())
+""",
+        "options": [
+            "Hahahaha..!",
+            "HA4..!",
+            "Error: Strings are immutable",
+            "HaHaHaHa..!"
+        ],
+        "answer": "Hahahaha..!",
+        "reason": "`capitalize()` makes first letter uppercase, rest lowercase"
+    }, {
+        "concept": "Multiple Variable Assignment & `print()` Parameters",
+        "question": """
+a, b, c = "Zubair", True, 15
+
+print(b, a , c, sep=", ", end=".")
+""",
+        "options": [
+            "True, Zubair, 15.",
+            "True Zubair 15",
+            "Error: ``sep`` and ``end`` can't be used together",
+            "Zubair, True, 15"
+        ],
+        "answer": "True, Zubair, 15.",
+        "reason": "`sep` defines separator, `end` defines output ending"
+    },
     {
         "concept": "Boolean Logic with `any()` Function",
         "question": """
@@ -170,15 +254,6 @@ print(all(numbers))
         "options": ["1", "2", "3", "Error"],
         "answer": "3",
         "reason": "Negative index last"
-    },
-    {
-        "concept": "String Multiplication",
-        "question": """
-        print("A" * 3)
-        """,
-        "options": ["AAA", "A3", "Error", "3A"],
-        "answer": "AAA",
-        "reason": "String repeated"
     },
     {
         "concept": "String to List Conversion",
