@@ -11,6 +11,29 @@ st.markdown(f"<h1 style='text-align: center; line-height: 20px; margin-bottom: 2
 # - - - - - - - - - - QUIZ DATA - - - - - - - - - -
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 quiz_data = [
+    {
+        "concept": "String Method: `strip()` with Characters",
+        "question": """
+text = \"\"\"
+
+
+    # $$ Hallo $$###\"\"\"
+text = text.strip()
+print(text)
+text = text.strip("$")
+print(text)
+text = text.strip("o $l#")
+print(text)
+""",
+        "options": [
+            "###$$ Hallo $$### → ###$$ Hallo $$### → Hallo → Ha",
+            "###$$ Hallo $$### → Hallo → Ha → H",
+            "Hallo → Ha → H",
+            "Error: strip() does not work with multiple characters"
+        ],
+        "answer": "###$$ Hallo $$### → ###$$ Hallo $$### → Hallo → Ha",
+        "reason": "`strip()` removes characters from both ends, not substrings, and is case-sensitive"
+    },
 
     {
         "concept": "Tuple Syntax: Single Element Trap",
