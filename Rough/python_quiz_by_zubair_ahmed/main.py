@@ -12,6 +12,61 @@ st.markdown(f"<h1 style='text-align: center; line-height: 20px; margin-bottom: 2
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 quiz_data = [
     {
+        "concept": "String Method: `partition()`",
+        "question": """
+two_nation = "Pakistan and India"
+
+print(two_nation.partition("and")) # if word Exists
+print(two_nation.partition("or")) # if word does't Exist
+""",
+        "options": [
+            "('Pakistan ', 'and', ' India') :gray[|] ('Pakistan and India', '', '')",
+            "('Pakistan ', 'and', ' India') :gray[|] ('Pakistan and India', 'or', 'or')",
+            "('Pakistan ', 'and', ' India') :gray[|] ('Pakistan ', 'or', ' India')",
+            "Error: partition() only splits existing words"
+        ],
+        "answer": "('Pakistan ', 'and', ' India') :gray[|] ('Pakistan and India', '', '')",
+        "reason": "`partition()` splits at the first match; if not found, returns the string and two empty strings."
+    },
+
+    {
+        "concept": "String Method: `find()` vs `rfind()`",
+        "question": """
+text = "Find in Left Right"
+
+print(text.find("i")) # Find letter 'i'
+print(text.find("ii")) # Find 'ii' in a row
+print(text.find("i", 2)) # Find 'i' after index 2
+print(text.rfind("i")) # Right-find letter 'i'
+""",
+        "options": [
+            "1 :gray[|] Error :gray[|] 5 :gray[|] 14",
+            "2 :gray[|] False :gray[|] 6 :gray[|] 15",
+            "1 :gray[|] -1 :gray[|] 5 :gray[|] 14",
+            "Error: `find` and `rfind` can't locate letters"
+        ],
+        "answer": "1 :gray[|] -1 :gray[|] 5 :gray[|] 14",
+        "reason": "`find()` searches from left and `rfind()` from right — returns index if found, `-1` if not."
+    },
+
+    {
+        "concept": "String Method: `split()` and `rsplit()` with `maxsplit`",
+        "question": """
+text = "1234123412341"
+print(text.split("2"))
+print(text.split("2", maxsplit=2))
+print(text.rsplit("2", maxsplit=1))
+""",
+        "options": [
+            "['1', '341', '341', '341'] :gray[|] ['1', '34', '12341'] :gray[|] ['123412341', '341']",
+            "['1', '341', '341', '341'] :gray[|] ['1', '341', '3412341'] :gray[|] ['12341', '1341']",
+            "['1', '341', '341', '341'] :gray[|] ['1', '341', '3412341'] :gray[|] ['123412341', '341']",
+            "Error: maxsplit"
+        ],
+        "answer": "['1', '341', '341', '341'] :gray[|] ['1', '341', '3412341'] :gray[|] ['123412341', '341']",
+        "reason": "`split()` cuts from left, `rsplit()` from right, `maxsplit` limits the number of splits."
+    },
+    {
         "concept": "String Method: `strip()` with Characters",
         "question": """
 text = \"\"\"
