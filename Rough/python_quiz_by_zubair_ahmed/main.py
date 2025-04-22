@@ -17,7 +17,7 @@ quiz_data = [
 text = \"\"\"
 
 
-    # $$ Hallo $$###\"\"\"
+    ###$$ Hallo $$###\"\"\"
 text = text.strip()
 print(text)
 text = text.strip("$")
@@ -26,12 +26,12 @@ text = text.strip("o $l#")
 print(text)
 """,
         "options": [
-            "###$$ Hallo $$### → ###$$ Hallo $$### → Hallo → Ha",
-            "###$$ Hallo $$### → Hallo → Ha → H",
-            "Hallo → Ha → H",
+            "`###$$ Hallo $$###` :gray[|] `###$$ Hallo $$###` :gray[|] `Ha`",
+            "`###$$ Hallo $$###`:gray[|] `### Hallo ###` :gray[|] `Ha`",
+            "`###$$Hallo$$###` :gray[|] `###Hallo###` :gray[|] `Ha`",
             "Error: strip() does not work with multiple characters"
         ],
-        "answer": "###$$ Hallo $$### → ###$$ Hallo $$### → Hallo → Ha",
+        "answer": "`###$$ Hallo $$###` :gray[|] `###$$ Hallo $$###` :gray[|] `Ha`",
         "reason": "`strip()` removes characters from both ends, not substrings, and is case-sensitive"
     },
 
@@ -69,12 +69,12 @@ exec(text_str)
 # Never use exec() on untrusted files or user input unless you are completely sure of what the code contains. Always sanitize inputs to avoid security risks like code injection or remote code execution.
 """,
         "options": [
-            "Welcome 1 2 3 4 7",
-            "Welcome 1 2 3 4 5 7",
-            "Welcome 1 3 7",
+            "Welcome :gray[|] 1 2 3 4 :gray[|] 7",
+            "Welcome :gray[|] 1 2 3 4 5 :gray[|] 7",
+            "Welcome :gray[|] 1 3 :gray[|] 7",
             "Error: exec() doesn't execute code"
         ],
-        "answer": "Welcome 1 3 7",
+        "answer": "Welcome :gray[|] 1 3 :gray[|] 7",
         "reason": "`exec()` executes the code, prints 'Welcome', loops with range(1, 5, 2), and prints the length of the greeting string."
     },
 
@@ -90,12 +90,12 @@ print(int(0))
 print(int(0.0))
 """,
         "options": [
-            "1 1 1 0 0 0",
-            "True 1 1 False 0 0",
-            "True 1 1.0 False 0 0.0",
+            "1 :gray[|] 1 :gray[|] 1 :gray[|] 0 :gray[|] 0 :gray[|] 0",
+            "True :gray[|] 1 :gray[|] 1 :gray[|] False :gray[|] 0 :gray[|] 0",
+            "True :gray[|] 1 :gray[|] 1.0 :gray[|] False :gray[|] 0 :gray[|] 0.0",
             "Error: Can't convert float or bool to int"
         ],
-        "answer": "1 1 1 0 0 0",
+        "answer": "1 :gray[|] 1 :gray[|] 1 :gray[|] 0 :gray[|] 0 :gray[|] 0",
         "reason": "True == 1 and False == 0; float values without decimal converted to int directly."
     },
 
@@ -139,12 +139,12 @@ print(f"{marks=}")
 print(f"{1+2=}")
 """,
         "options": [
-            "person='Zubair' marks=75 1+2=3",
-            "Zubair 75 3",
+            "person='Zubair' :gray[|] marks=75 :gray[|] 1+2=3",
+            "Zubair :gray[|] 75 :gray[|] 3",
             "Error: Invalid syntax for f-string with '='",
-            "person=Zubair marks=75 1+2=3"
+            "person=Zubair :gray[|] marks=75 :gray[|] 1+2=3"
         ],
-        "answer": "person='Zubair' marks=75 1+2=3",
+        "answer": "person='Zubair' :gray[|] marks=75 :gray[|] 1+2=3",
         "reason": "`=` f-string debugging feature prints both the variable name and its value."
     },
 
@@ -158,12 +158,12 @@ print(other_players)
 print(last_player)
 """,
         "options": [
-            "Babar ['Naseem', 'Rizwan'] Shaheen",
-            "'Babar' 'Naseem' 'Rizwan'",
+            "Babar :gray[|] ['Naseem', 'Rizwan'] :gray[|] Shaheen",
+            "Babar :gray[|] Naseem :gray[|] Rizwan",
             "Error: Too many values to unpack",
-            "['Babar', 'Naseem', 'Rizwan', 'Shaheen']"
+            "' ' :gray[|] ['Babar', 'Naseem', 'Rizwan', 'Shaheen'] :gray[|] ' '"
         ],
-        "answer": "Babar ['Naseem', 'Rizwan'] Shaheen",
+        "answer": "Babar :gray[|] ['Naseem', 'Rizwan'] :gray[|] Shaheen",
         "reason": "`*other_players` absorbs middle values in unpacking"
     },
     {
@@ -191,12 +191,12 @@ print(round(round_figure, -1))
 print(round(round_figure, -3))
 """,
         "options": [
-            "12459.1235\n12459.12\n12460.0\n12000.0",
-            "12459.1234\n12459.12\n12450.0\n12000.0",
+            "12459.1235 :gray[|] 12459.12 :gray[|] 12460.0 :gray[|] 12000.0",
+            "12459.1234 :gray[|] 12459.12 :gray[|] 12450.0 :gray[|] 12000.0",
             "Error: Negative precision not allowed",
-            "12459.1235\n12459.12\n12459.0\n12459.0"
+            "12459.1235 :gray[|] 12459.12 :gray[|] 12459.0 :gray[|] 12459.0"
         ],
-        "answer": "12459.1235\n12459.12\n12460.0\n12000.0",
+        "answer": "12459.1235 :gray[|] 12459.12 :gray[|] 12460.0 :gray[|] 12000.0",
         "reason": "`round()` handles decimal & negative precision correctly"
     },
 
@@ -209,12 +209,12 @@ large_number2 = 10_000_000_000
 print(large_number2)
 """,
         "options": [
-            "10,000,000,000\n10000000000",
-            "10,000,000,000\n10_000_000_000",
+            "10,000,000,000 :gray[|] 10000000000",
+            "10,000,000,000 :gray[|] 10_000_000_000",
             "Error: Underscore (_) not allowed in integers",
-            "10000000000\n10_000_000_000"
+            "10000000000 :gray[|] 10_000_000_000"
         ],
-        "answer": "10,000,000,000\n10000000000",
+        "answer": "10,000,000,000 :gray[|] 10000000000",
         "reason": "Comma formats number, underscore is ignored in value"
     },
     {
@@ -242,12 +242,12 @@ print(countries.get("USA"))
 print(countries.get("USA", "Not-Found"))
 """,
         "options": [
-            "None Not-Found",
+            "None :gray[|] Not-Found",
             "Error: 'USA' Key not found",
-            "Not-Found Not-Found",
-            "None None"
+            "Not-Found :gray[|] Not-Found",
+            "None :gray[|] None"
         ],
-        "answer": "None Not-Found",
+        "answer": "None :gray[|] Not-Found",
         "reason": "If key not found: `.get()` returns `None` or the provided default"
     },
 
@@ -277,12 +277,12 @@ for (key, value), country in zip(name_num.items(), countries):
     print(f"{key} - {value}%, {country}.")
 """,
         "options": [
-            "Zubair - 99%, PAK. Babar - 75%, KSA. Zubair - 99%, UAE. Babar - 75%, USA.",
-            "Zubair - 99%, PAK. Babar - 75%, KSA.",
+            "Zubair - 99%, PAK. :gray[|] Babar - 75%, KSA. :gray[|] Zubair - 99%, UAE. :gray[|] Babar - 75%, USA.",
+            "Zubair - 99%, PAK. :gray[|] Babar - 75%, KSA.",
             "Error: Invalid pairing of country and name",
-            "PAK - Zubair%. KSA - 99%. UAE - Babar%. USA - 75%."
+            "PAK - Zubair%. :gray[|] KSA - 99%. :gray[|] UAE - Babar%. :gray[|] USA - 75%."
         ],
-        "answer": "Zubair - 99%, PAK. Babar - 75%, KSA.",
+        "answer": "Zubair - 99%, PAK. :gray[|] Babar - 75%, KSA.",
         "reason": "Zip pairs dictionary items with list elements"
     },
 
@@ -312,12 +312,12 @@ print(list(my_iterator))
 print(list(my_iterator))
 """,
         "options": [
-            "[1, 2, 3] [1, 2, 3]",
-            "[1, 2, 3] []",
+            "[1, 2, 3] :gray[|] [1, 2, 3]",
+            "[1, 2, 3] :gray[|] []",
             "Error: Iterator can't be reused",
-            "[1, 2, 3] StopIteration Error"
+            "[1, 2, 3] :gray[|] StopIteration Error"
         ],
-        "answer": "[1, 2, 3] []",
+        "answer": "[1, 2, 3] :gray[|] []",
         "reason": "Iterator exhausts after first_player complete loop"
     },
     {
@@ -362,12 +362,12 @@ print(any(name))
 print(any(numbers))
 """,
         "options": [
-            "True True False",
-            "False False False",
+            "True :gray[|] True :gray[|] False",
+            "False :gray[|] False :gray[|] False",
             "Error: Empty strings not allowed",
-            "True False True"
+            "True :gray[|] False :gray[|] True"
         ],
-        "answer": "True True False",
+        "answer": "True :gray[|] True :gray[|] False",
         "reason": "`any()` returns True if at least one truthy value exists"
     },
     {
@@ -382,12 +382,12 @@ print(all(name))
 print(all(numbers))
 """,
         "options": [
-            "False True False",
-            "True True True",
+            "False :gray[|] True :gray[|] False",
+            "True :gray[|] True :gray[|] True",
             "Error: Zero breaks all()",
-            "False False False"
+            "False :gray[|] False :gray[|] False"
         ],
-        "answer": "False True False",
+        "answer": "False :gray[|] True :gray[|] False",
         "reason": "`all()` returns False if any falsy value (like 0) exists"
     },
     {
@@ -424,12 +424,12 @@ print(all(numbers))
     print(not age)
     """,
         "options": [
-            "Babar Azam None False",
-            "Babar Azam None True",
+            "Babar Azam :gray[|] None :gray[|] False",
+            "Babar Azam :gray[|] None :gray[|] True",
             "Error: None breaks `and` operation",
-            "Babar Azam None True"
+            "True :gray[|] False :gray[|] True"
         ],
-        "answer": "Babar Azam None False",
+        "answer": "Babar Azam :gray[|] None :gray[|] False",
         "reason": "`or` gives first_player truthy, `and` gives last_player falsy (None), `not` negates age"
     },
     {
@@ -480,12 +480,12 @@ print(all(numbers))
     print(bool(-1))
     """,
         "options": [
-            "False False True",
-            "True False False",
-            "False False False",
-            "True True Error"
+            "False :gray[|] False :gray[|] True",
+            "True :gray[|] False :gray[|] False",
+            "False :gray[|] False :gray[|] False",
+            "True :gray[|] True :gray[|] Error"
         ],
-        "answer": "False False True",
+        "answer": "False :gray[|] False :gray[|] True",
         "reason": "0/Empty False, -1 True"
     },
     {
