@@ -6,7 +6,7 @@ Create a class Student with attributes name and marks. Use the self keyword to i
 
 
 class Student:  # Class
-    def __init__(self, name, marks):  # Initialize via a Constructor
+    def __init__(self, name: str, marks: int):  # Initialize via a Constructor
         self.name = name  # Save Name in (Instance) Variable
         self.marks = marks  # Save Marks
 

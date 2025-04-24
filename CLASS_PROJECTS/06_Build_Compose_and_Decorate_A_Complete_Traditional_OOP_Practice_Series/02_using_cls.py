@@ -8,7 +8,7 @@ Create a class Counter that keeps track of how many objects have been created. U
 class Counter:  # Class
     count = 0  # Save TOTAL OBJECT COUNT in (Class) Variable
 
-    def __init__(self, country_name, dial_num):  # Initialize via a Constructor
+    def __init__(self, country_name: str, dial_num: int):  # Initialize via a Constructor
         self.country_name = country_name  # Save NAME in (Instance) Variable
         self.dial_num = dial_num  # Save DIAL
         Counter.count += 1  # Increment Class Variable
