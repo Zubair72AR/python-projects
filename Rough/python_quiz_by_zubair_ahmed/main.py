@@ -12,6 +12,37 @@ st.markdown(f"<h1 style='text-align: center; line-height: 20px; margin-bottom: 2
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 quiz_data = [
     {
+        "concept": "Dictionary with Duplicate Keys",
+        "question": """
+d = {'a':1, 'a':2, 'a':3}
+print(len(d))
+""",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "Error: Duplicate keys not allowed"
+        ],
+        "answer": "1",
+        "reason": "Dictionaries cannot have duplicate keys; the last value overwrites the previous ones."
+    },
+    {
+        "concept": "String to Number Conversion with `float()` and `int()`",
+        "question": """
+print(float("3.14"))
+print(int("3.14"))
+print(int("3"))
+""",
+        "options": [
+            "3.14 :gray[|] Error: int() cannot convert string with decimal  :gray[|] 3",
+            "3.14  :gray[|] Error: int() cannot convert string with decimal  :gray[|] Error: int() cannot convert string with decimal",
+            "Error: float() cannot convert string with decimal  :gray[|] 3  :gray[|] 3",
+            "3.14 :gray[|] 3.14 :gray[|] 3"
+        ],
+        "answer": "3.14 :gray[|] Error: int() cannot convert string with decimal  :gray[|] 3",
+        "reason": "`float()` can handle decimals, but `int()` truncates the decimal part."
+    },
+    {
         "concept": "String Method: `partition()`",
         "question": """
 two_nation = "Pakistan and India"
