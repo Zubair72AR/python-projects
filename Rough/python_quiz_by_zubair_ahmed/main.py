@@ -12,6 +12,74 @@ st.markdown(f"<h1 style='text-align: center; line-height: 20px; margin-bottom: 2
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 quiz_data = [
     {
+        "concept": "Merging Dictionaries with `update()` and Unpacking",
+        "question": """
+a = {1: "a", 2: "b"}
+b = {3: "c", 4: "d"}
+c = {5: "e", 6: "f"}
+
+a.update(b)
+print(a)
+print({**a, **c})
+""",
+        "options": [
+            "{1: 'a', 2: 'b', 3: 'c', 4: 'd'} :gray[|] {1: 'a', 2: 'b', 3: 'c', 4: 'd', 5: 'e', 6: 'f'}",
+            "{1: 'a', 2: 'b', 3: 'c', 4: 'd'} :gray[|] {1: 'a', 2: 'b', 5: 'e', 6: 'f'}",
+            "Error: Cannot merge dictionaries",
+            "{1: 'a', 2: 'b', 3: 'c', 4: 'd'} :gray[|] Error"
+        ],
+        "answer": "{1: 'a', 2: 'b', 3: 'c', 4: 'd'} :gray[|] {1: 'a', 2: 'b', 3: 'c', 4: 'd', 5: 'e', 6: 'f'}",
+        "reason": "`update()` merges the dictionaries, and `{**a, **c}` is used for unpacking and combining dictionaries."
+    },
+    {
+        "concept": "Using `math.ceil()` for Rounding Up",
+        "question": """
+import math
+
+print(math.ceil(-5.35))
+print(math.ceil(5.35))
+print(math.ceil(-96.99))
+print(math.ceil(96.97))
+""",
+        "options": [
+            "-5 :gray[|] 6 :gray[|] -96 :gray[|] 97",
+            "-5 :gray[|] 5 :gray[|] -96 :gray[|] 96",
+            "-6 :gray[|] 6 :gray[|] -97 :gray[|] 97",
+            "Error: Invalid math operation"
+        ],
+        "answer": "-5 :gray[|] 6 :gray[|] -96 :gray[|] 97",
+        "reason": "`math.ceil()` rounds numbers upwards, towards positive infinity, even for negative numbers"
+    },
+    {
+        "concept": "Scope: `nonlocal` Keyword in Nested Functions",
+        "question": """
+city = "Karachi"
+
+def outer_func():
+    city = "Islamabad"
+    print(city)
+
+    def inner_func():
+        nonlocal city
+        city = "Lahore"
+        print(city)
+
+    inner_func()
+    print(city)
+
+outer_func()
+print(city)
+""",
+        "options": [
+            "Islamabad  :gray[|] Lahore  :gray[|] Lahore  :gray[|] Karachi",
+            "Islamabad  :gray[|] Lahore  :gray[|] Islamabad  :gray[|] Karachi",
+            "Islamabad  :gray[|] Lahore  :gray[|] Lahore  :gray[|] Lahore",
+            "Error: `nonlocal` can't be used here"
+        ],
+        "answer": "Islamabad  :gray[|] Lahore  :gray[|] Lahore  :gray[|] Karachi",
+        "reason": "`nonlocal` changes the variable in the nearest enclosing function, not global"
+    },
+    {
         "concept": "Dictionary with Duplicate Keys",
         "question": """
 d = {'a':1, 'a':2, 'a':3}
