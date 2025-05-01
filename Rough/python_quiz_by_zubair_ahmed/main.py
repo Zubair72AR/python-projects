@@ -12,6 +12,45 @@ st.markdown(f"<h1 style='text-align: center; line-height: 20px; margin-bottom: 2
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 quiz_data = [
     {
+        "concept": "Binary, Octal, and Hexadecimal Conversions",
+        "question": """
+bin_num = bin(25)
+oct_num = oct(25)
+hex_num = hex(25)
+
+print(int(bin_num, 2))
+print(int(oct_num, 8))
+print(int(hex_num, 16))
+""",
+        "options": [
+            "25 :gray[|] 25 :gray[|] 25",
+            "Error: Invalid format for int conversion",
+            "Binary, Octal, Hexadecimal numbers are printed in different formats",
+            "2 :gray[|] 8 :gray[|] 16"
+        ],
+        "answer": "25 :gray[|] 25 :gray[|] 25",
+        "reason": "`int()` correctly converts binary, octal, and hexadecimal string representations back to decimal"
+    },
+    {
+        "concept": "Integer Caching and `id()` Function",
+        "question": """
+a = 123
+b = 123
+
+print(id(a))
+print(id(b))
+print(id(123))
+""",
+        "options": [
+            "All three IDs are same",
+            "All three IDs are different",
+            "Only a and b have same ID, 123 is different",
+            "Error: `id()` doesn't work on numbers"
+        ],
+        "answer": "All three IDs are same",
+        "reason": "Small integers (typically -5 to 256) are cached and reused by Python"
+    },
+    {
         "concept": "Generators and Iteration",
         "question": """
 def my_generator(my_lst):
