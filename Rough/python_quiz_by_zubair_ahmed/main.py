@@ -12,6 +12,30 @@ st.markdown(f"<h1 style='text-align: center; line-height: 20px; margin-bottom: 2
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 quiz_data = [
     {
+        "concept": "Generators and Iteration",
+        "question": """
+def my_generator(my_lst):
+    for char in my_lst:
+        yield char
+
+my_lst = ["A", "B", "C", "D", "E"]
+x = my_generator(my_lst)
+
+print(next(x))
+print(next(x))
+print(list(x))
+print(list(x))
+""",
+        "options": [
+            "A :gray[|] B :gray[|] ['C', 'D', 'E'] :gray[|] []",
+            "next :gray[|] next :gray[|] ['A','B','C', 'D', 'E'] :gray[|] ['A','B','C', 'D', 'E']",
+            "A :gray[|] B :gray[|] ['A','B','C', 'D', 'E'] :gray[|] []",
+            "Error: Generator object cannot be iterated"
+        ],
+        "answer": "A :gray[|] B :gray[|] ['C', 'D', 'E'] :gray[|] []",
+        "reason": "`next()` consumes values from the generator; once exhausted, repeated `list()` calls return empty list"
+    },
+    {
         "concept": "Merging Dictionaries with `update()` and Unpacking",
         "question": """
 a = {1: "a", 2: "b"}
