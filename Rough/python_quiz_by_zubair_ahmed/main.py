@@ -12,6 +12,30 @@ st.markdown(f"<h1 style='text-align: center; line-height: 20px; margin-bottom: 2
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 quiz_data = [
     {
+        "concept": "Set Element Types and Hashability",
+        "question": """
+set_with_str_int = {"A", "B", 1, 2, 3}
+set_with_tuple = {"A", "B", (1, 2, 3)}
+set_with_dict = {"A", "B", {1: "C", 2: "D"}}
+set_with_set = {"A", "B", {"C", "D"}}
+set_with_list = {"A", "B", [1, 2, 3]}
+
+print(set_with_str_int)
+print(set_with_tuple)
+print(set_with_dict)
+print(set_with_set)
+print(set_with_list)
+""",
+        "options": [
+            "Only set_with_str_int and set_with_tuple work; others raise error",
+            "All sets are valid and will print",
+            "Only set_with_dict causes error",
+            "Only set_with_list causes error"
+        ],
+        "answer": "Only set_with_str_int and set_with_tuple work; others raise error",
+        "reason": "Only hashable (immutable) types can be elements in a set; dict, list, and set are unhashable"
+    },
+    {
         "concept": "Binary, Octal, and Hexadecimal Conversions",
         "question": """
 bin_num = bin(25)
